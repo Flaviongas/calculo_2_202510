@@ -177,6 +177,247 @@ $$
 ¿Y si hubieramos sido el cateto opuesto? Realiza el mismo proceso, pero asumiendo que el cateto opuesto es $\sqrt{16 - x^2}$.
 
 
-::: {style="text-align:center; width:100%; margin-left: auto; margin-right: auto;"}
+::: {style="text-align:center; width:70%; margin-left: auto; margin-right: auto;"}
 ![](./6.png)
 :::
+
+##
+Usando el teorema de Pitágoras, podemos deducir que:
+$$
+b = \sqrt{c^2 - a^2} \cong \sqrt{16 - x^2}
+$$
+Por lo que $c$ es la hipotenusa, $a$ es el cateto opuesto y $b$ es el cateto adyacente.
+$$
+c = 4 \hspace{0.3cm} a = 4
+$$
+
+Por lo que el triángulo quedaría así:
+
+::: {style="text-align:center; width:50%; margin-left: auto; margin-right: auto;"}
+![](./7.png)
+:::
+
+##
+Ahora podemos utilizar una función trigonométrica para relacionar el cateto restante con la hipotenusa:
+$$
+\cos(\theta) = \frac{x}{4}
+$$
+Despejando $x$ tenemos:
+$$
+x = 4 \cos(\theta)
+$$
+Derivando nuevamente:
+$$
+dx = -4 \sin(\theta) d\theta
+$$
+
+##
+Reemplazando en la integral:
+$$
+\int \frac{1}{\sqrt{16 - x^2}} dx = \int \frac{1}{\sqrt{16 - (4 \cos(\theta))^2}} (-4 \sin(\theta)) d\theta
+$$
+Desarrollando la raíz:
+$$
+4 \int \frac{-\sin(\theta) }{\sqrt{16 - 16 \cos^2(\theta)}}  d\theta
+$$
+Factorizando:
+$$
+4 \int \frac{-\sin(\theta) }{\sqrt{16(1 - \cos^2(\theta))}}  d\theta
+$$
+
+## 
+Sacando el factor común de la raíz:
+$$
+4 \int \frac{-\sin(\theta) }{4 \sqrt{1 - \cos^2(\theta)}}  d\theta
+$$
+$$
+\int \frac{-\sin(\theta) }{\sqrt{1 - \cos^2(\theta)}}  d\theta
+$$
+Recordemos nuevamente la identidad:
+$$
+\sin^2(\theta) + \cos^2(\theta) = 1
+$$
+Si despejamos $\sin(\theta)$, tenemos:
+$$
+\sin(\theta) = \sqrt{1 - \cos^2(\theta)}
+$$
+
+##
+Reemplazando en la integral:
+$$
+\int \frac{-\sin(\theta) }{\sqrt{1 - \cos^2(\theta)}}  d\theta = \int \frac{-\sin{( \theta )}}{\sin{( \theta )}}  d\theta
+$$
+$$
+\int -1 d\theta = -\theta + C
+$$
+Ahora tenemos que volver a la variable original, para eso, recordemos la relación que teníamos entre $x$ y $\theta$:
+$$
+x = 4 \cos(\theta)
+$$
+
+$$
+\cos(\theta) = \frac{x}{4}
+$$
+
+##
+
+Despejando $\theta$ tenemos:
+$$
+\theta = \arccos{\left(\frac{x}{4}\right)}
+$$
+Por lo que reemplazando en el resultado:
+$$
+\int \frac{1}{\sqrt{16 - x^2}} dx = -\arccos{\left(\frac{x}{4}\right)} + C
+$$
+
+# ¿Es este resultado válido?
+
+## Si
+Una integral indefinida es en realidad una antiderivada, en otras palabras una familia de funciones que tienen la misma derivada. Por lo tanto, ambos son válidas, si graficamos ambas funciones, podemos ver que son iguales, pero desplazadas en el eje $y$:
+
+::: {style="text-align:center; width:60%; margin-left: auto; margin-right: auto;"}
+![](./8.png)
+:::
+
+## Ejercicio 2
+Resuelve la siguiente integral usando la sustitución trigonométrica:
+$$
+\int \frac{dx}{( x^2 + 4 )^{3/2}}
+$$
+
+## 
+Inmediatamente podemos ver que el denominador se parece a la raíz cuadrada de una suma, por lo que podemos asumir que es la hipotenusa de un triángulo rectángulo. Por lo que podemos deducir que:
+$$
+\sqrt{x^2 + 4} \cong \sqrt{a^2 + b^2}
+$$
+Por lo que $a = x$ (cateto adyacente) y $b = 2$ (cateto opuesto).
+
+::: {style="text-align:center; width:55%; margin-left: auto; margin-right: auto;"}
+![](./9.png)
+:::
+
+##
+Basados en esto podemos usar la relación trigonométrica:
+$$
+\tan(\theta) = \frac{2}{x}
+$$
+Despejando $x$ tenemos:
+$$
+x = \frac{2}{\tan(\theta)}
+$$
+Esta sustitución no es muy común, pero es válida. Una más sencilla se consiguería si asumimos que el cateto opuesto es $x$ y el cateto adyacente es $2$.
+
+::: {style="text-align:center; width:37%; margin-left: auto; margin-right: auto;"}
+![](./10.png)
+:::
+
+##
+Ahora, usando tangente nuevamente, tenemos:
+$$
+\tan(\theta) = \frac{x}{2}
+$$
+Despejando $x$ tenemos:
+$$
+x = 2 \tan(\theta)
+$$
+Derivando:
+$$
+dx = 2 \sec^2(\theta) d\theta
+$$
+Reemplazando en la integral:
+$$
+\int \frac{dx}{( x^2 + 4 )^{3/2}}
+=
+\int \frac{2 \sec^2(\theta) d\theta}{( (2 \tan(\theta))^2 + 4 )^{3/2}}
+$$
+
+##
+Desarrollando el denominador:
+$$
+\int \frac{2 \sec^2(\theta) d\theta}{( 4 \tan^2(\theta) + 4 )^{3/2}}
+$$
+Sacando el factor común:
+$$
+\int \frac{2 \sec^2(\theta) d\theta}{( 4 ( \tan^2(\theta) + 1 ) )^{3/2}}
+$$
+Sacando el 2 como constante:
+$$
+2\int \frac{\sec^2(\theta) d\theta}{4^{3/2} ( \tan^2(\theta) + 1 )^{3/2}}
+$$
+$$
+\frac{2}{8} \int \frac{\sec^2(\theta) d\theta}{( \tan^2(\theta) + 1 )^{3/2}}
+$$
+
+##
+
+$$
+\frac{1}{4} \int \frac{\sec^2(\theta) d\theta}{( \tan^2(\theta) + 1 )^{3/2}}
+$$
+Para este ejercicio, hay una identidad trigonométrica que nos puede ayudar:
+$$
+\sec^2(\theta) = 1 + \tan^2(\theta)
+$$
+Reemplazando en la integral:
+$$
+\frac{1}{4} \int \frac{( 1 + \tan^2(\theta) ) d\theta}{( \tan^2(\theta) + 1 )^{3/2}}
+$$
+Esto se puede simplificar:
+$$
+\frac{1}{4} \int \frac{( 1 + \tan^2(\theta) ) d\theta}{( 1 + \tan^2(\theta) )^{3/2}}
+$$
+
+##
+$$
+\frac{1}{4} \int \frac{( 1 + \tan^2(\theta) ) d\theta}{( 1 + \tan^2(\theta) )^{3/2}} = \frac{1}{4} \int ( 1 + \tan^2(\theta) )^{-1/2} d\theta
+$$
+Usamos la misma identidad:
+
+$$
+\sec^2(\theta) = 1 + \tan^2(\theta)
+$$
+$$
+\frac{1}{4} \int \sec^2(\theta)^{-1/2} d\theta
+$$
+$$
+\frac{1}{4} \int \frac{1}{\sqrt{\sec^2(\theta)}} d\theta
+$$
+$$
+\frac{1}{4} \int \frac{1}{\sec(\theta)} d\theta
+$$
+
+##
+Recordemos la definición de secante:
+$$
+\sec(\theta) = \frac{1}{\cos(\theta)}
+$$
+Por lo que podemos escribir:
+$$
+\frac{1}{4} \int \frac{1}{\sec(\theta)} d\theta = \frac{1}{4} \int \cos(\theta) d\theta
+$$
+La cual es una integral básica:
+$$
+\frac{1}{4} \int \cos(\theta) d\theta = \frac{1}{4} \sin(\theta) + C
+$$
+
+##
+
+Ahora tenemos que volver a la variable original, para eso, podemos usar el mismo triangulo:
+
+
+::: {style="text-align:center; width:37%; margin-left: auto; margin-right: auto;"}
+![](./10.png)
+:::
+
+El seno es:
+$$
+\sin(\theta) = \frac{x}{\sqrt{x^2 + 4}}
+$$
+
+##
+Reemplazando en el resultado:
+$$
+\int \frac{dx}{( x^2 + 4 )^{3/2}} = \frac{1}{4} \sin(\theta) + C
+$$
+$$
+\int \frac{dx}{( x^2 + 4 )^{3/2}} = \frac{1}{4} \frac{x}{\sqrt{x^2 + 4}} + C
+$$
