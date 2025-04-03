@@ -421,3 +421,157 @@ $$
 $$
 \int \frac{dx}{( x^2 + 4 )^{3/2}} = \frac{1}{4} \frac{x}{\sqrt{x^2 + 4}} + C
 $$
+
+# Fracciones Parciales
+
+Las fracciones parciales son una técnica utilizada para descomponer una función racional en una suma de fracciones más simples. Esta técnica es especialmente útil para resolver integrales que involucran funciones racionales.
+
+##
+
+#### Caso 1
+Denominador lineal (grado menor al del denominador)
+$$
+\frac{P(x)}{(ax+b)(cx+d)(ex+f)} = \frac{A}{ax+b} + \frac{B}{cx+d} + \frac{C}{ex+f}
+$$
+
+#### Caso 2
+Denominador lineal repetido
+$$
+\frac{P(x)}{(ax+b)(cx+d)^2(ex+f)} = \frac{A}{ax+b} + \frac{B}{cx+d} + \frac{C}{(cx+d)^2} + \frac{D}{ex+f}
+$$
+
+#### Caso 3
+Denominador cuadrático irreducible
+$$
+\frac{P(x)}{(x^2+1)} = \frac{Ax+B}{x^2+1}
+$$
+
+##
+
+#### Caso 4
+Denominador cuadrático irreducible repetido
+$$
+\frac{P(x)}{(x^2+1)^2} = \frac{Ax+B}{x^2+1} + \frac{Cx+D}{(x^2+1)^2}
+$$
+
+## Ejemplo
+
+$$ \int \frac{4}{x^3 + 2x^2 - 3x} dx $$
+
+## 
+Primero, factorizamos el denominador:
+$$
+x^3 + 2x^2 - 3x = x(x^2 + 2x - 3) = x(x+3)(x-1)
+$$
+Reescribiendo la integral:
+
+$$
+\int \frac{4}{x(x+3)(x-1)} dx
+$$
+Ahora, descomponemos la fracción en fracciones parciales:
+$$
+\frac{4}{x(x+3)(x-1)} = \frac{A}{x} + \frac{B}{x+3} + \frac{C}{x-1}
+$$
+Multiplicando ambos lados por el denominador común:
+$$
+4 = A(x+3)(x-1) + Bx(x-1) + Cx(x+3)
+$$
+
+##
+
+Desarrollamos:
+$$
+4 = A(x^2 + 2x - 3) + B(x^2 - x) + C(x^2 + 3x)
+$$
+$$
+4 = Ax^2 + 2Ax - 3A + Bx^2 - Bx + Cx^2 + 3Cx
+$$
+Agrupamos términos basados en su grado:
+$$
+4 = (A + B + C)x^2 + (2A - B + 3C)x + (-3A)
+$$
+Igualamos los coeficientes, escribiendo 0 para los términos que no aparecen:
+$$
+0x^2 + 0x + 4 = (A + B + C)x^2 + (2A - B + 3C)x + (-3A)
+$$
+
+##
+Esto nos da un sistema de ecuaciones:
+$$
+A + B + C = 0 \hspace{1cm} (1)
+$$
+$$
+2A - B + 3C = 0 \hspace{1cm} (2)
+$$
+$$
+-3A = 4 \hspace{1cm} (3)
+$$
+De la ecuación (3), podemos despejar $A$:
+$$
+A = -\frac{4}{3}
+$$
+Ahora, sustituimos $A$ en las ecuaciones (1) y (2):
+$$
+-\frac{4}{3} + B + C = 0 \hspace{1cm} (1)
+$$
+$$
+2\left(-\frac{4}{3}\right) - B + 3C = 0 \hspace{1cm} (2)
+$$
+
+## 
+
+Aqui, podemos despejar cuaquier variable en cualquier ecuación restante, por ejemplo $B$ en la ecuación (1):
+
+$$
+B = \frac{4}{3} - C \hspace{1cm} (1)
+$$
+Y reemplazarlo en la ecuación (2):
+$$
+2\left(-\frac{4}{3}\right) - \left(\frac{4}{3} - C\right) + 3C = 0
+$$
+$$
+-\frac{8}{3} - \frac{4}{3} + C + 3C = 0
+$$
+$$
+-\frac{12}{3} + 4C = 0
+$$
+$$
+4C = 4 \rightarrow C = 1
+$$
+
+
+##
+Ahora que tenemos C, podemos reemplazarlo en el despeje de $B$ de la ecuación (1):
+$$
+B = \frac{4}{3} - C
+$$
+$$
+B = \frac{4}{3} - 1
+$$
+
+$$
+B = \frac{4}{3} - \frac{3}{3}
+$$
+$$
+B = \frac{1}{3}
+$$
+
+Tenemos los valores de $A$, $B$ y $C$:
+$$
+A = -\frac{4}{3} \hspace{1cm} B = \frac{1}{3} \hspace{1cm} C = 1
+$$
+
+##
+
+Reemplazando en la descomposición de fracciones parciales:
+$$
+\frac{4}{x(x+3)(x-1)} = \frac{-\frac{4}{3}}{x} + \frac{\frac{1}{3}}{x+3} + \frac{1}{x-1}
+$$
+$$
+\frac{4}{x(x+3)(x-1)} = -\frac{4}{3x} + \frac{1}{3(x+3)} + \frac{1}{x-1}
+$$
+
+Para comprobar que esto esté correcto, podemos sumar las fracciones parciales y ver si obtenemos la fracción original:
+$$
+-\frac{4}{3x} + \frac{1}{3(x+3)} + \frac{1}{x-1} = \frac{-4(x+3)(x-1) + x(x-1) + 3x}{3x(x+3)(x-1)}
+$$
