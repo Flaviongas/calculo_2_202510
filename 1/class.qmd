@@ -1,0 +1,182 @@
+---
+title: "Integrales: Sustitución trigonométrica y fracciones parciales"
+author: "Flavio Jara L."
+format:
+  revealjs:
+      transition: zoom
+      html-math-method: katex
+include-in-header:
+  - text: |
+      <style>
+      p,ul {
+        font-size: 0.70em;
+      }
+      </style>
+---
+
+## Sustitución trigonométrica
+La sustitución trigonométrica es una técnica utilizada para resolver integrales que involucran raíces cuadradas de expresiones cuadráticas. Esta técnica se basa en la relación entre las funciones trigonométricas y las raíces cuadradas.
+
+##### Tabla
+Una opción (que no recomiendo) es usar la siguiente tabla de sustituciones trigonométricas:
+$$
+\begin{array}{|c|c|c|}
+\hline
+\text{Forma} & \text{Sustitución} & \text{Integral resultante} \\
+\hline
+\sqrt{a^2 - x^2} & x = a \sin(\theta) & \int a \cos(\theta) d\theta \\
+\sqrt{a^2 + x^2} & x = a \tan(\theta) & \int a \sec^2(\theta) d\theta \\
+\sqrt{x^2 - a^2} & x = a \sec(\theta) & \int a \sec(\theta) \tan(\theta) d\theta \\
+\hline
+\end{array}
+$$
+
+## Creando un triangulo
+En primer lugar, recordemos el teorema de Pitágoras:
+$$
+a^2 + b^2 = c^2
+$$
+Si despejamos una de las variables, por ejemplo $c$ (la hipotenusa), tenemos:
+$$
+c = \sqrt{a^2 + b^2}
+$$
+
+Si despejamos $a$ (un cateto), tenemos:
+$$
+a = \sqrt{c^2 - b^2}
+$$
+
+Despejando $b$ (el otro cateto), tenemos:
+$$
+b = \sqrt{c^2 - a^2}
+$$
+
+##
+
+::: {style="text-align:center; width:55%; margin-left: auto; margin-right: auto;"}
+![](./1.png)
+:::
+
+::: {style="text-align:center; width:55%; margin-left: auto; margin-right: auto;"}
+![](./2.png)
+:::
+
+##
+
+::: {style="text-align:center; width:55%; margin-left: auto; margin-right: auto;"}
+![](./3.png)
+:::
+
+::: {style="text-align:center; width:55%; margin-left: auto; margin-right: auto;"}
+![](./4.png)
+:::
+
+# ¿Porqué importan los triángulos?
+Permiten deducir las sustitución en vez de memorizarlas.
+
+## Ejemplo
+$$ \int \frac{1}{\sqrt{16 - x^2}} dx $$
+
+El denominador se parece al despeje de un cateto, no importa si es el cateto opuesto o adyacente, lo importante es que se parece a la raíz cuadrada de una resta. ##
+Asumimos que el cateto adyacente es $\sqrt{16 -x^2}$, esto se parece a el despeje de $a$ (el cateto adyacente), por lo tanto, podemos escribir:
+
+$$
+\sqrt{16 - x^2} \cong \sqrt{c^2 - b^2}
+$$
+
+De aquí podemos deducir que $c = 4$ y $b = x$.
+
+##
+
+Por lo tanto, podemos armar el siguiente triángulo:
+
+
+::: {style="text-align:center; width:40%; margin-left: auto; margin-right: auto;"}
+![](./5.png)
+:::
+
+Con esto podemos deducir esta expresion:
+$$
+\sin(\theta) = \frac{x}{4}
+$$
+Despejando $x$ tenemos:
+$$
+x = 4 \sin(\theta)
+$$
+
+## 
+Esta relación por si misma no nos sirve de nada, pero si la derivamos, podemos obtener una relación entre $dx$ y $d\theta$:
+$$
+x = 4 \sin(\theta)
+$$
+$$
+dx = 4 \cos(\theta) d\theta
+$$
+
+Reemplazando en la integral:
+$$
+\int \frac{1}{\sqrt{16 - x^2}} dx = \int \frac{1}{\sqrt{16 - (4 \sin(\theta))^2}} 4 \cos(\theta) d\theta
+$$
+Desarrollando la raíz:
+$$
+4 \int \frac{\cos(\theta) }{\sqrt{16 - 16 \sin^2(\theta)}}  d\theta
+$$
+
+##
+
+Sacando el factor común de la raíz:
+$$
+4 \int \frac{\cos(\theta) }{\sqrt{16(1 - \sin^2(\theta))}}  d\theta
+$$
+$$
+4 \int \frac{\cos(\theta) }{\sqrt{16} \sqrt{1 - \sin^2(\theta)}}  d\theta
+$$
+$$
+4 \int \frac{\cos(\theta) }{4 \sqrt{1 - \sin^2(\theta)}}  d\theta
+$$
+
+$$
+\int \frac{\cos(\theta) }{\sqrt{1 - \sin^2(\theta)}}  d\theta
+$$
+
+##
+Recordemos la identidad:
+$$
+\sin^2(\theta) + \cos^2(\theta) = 1
+$$
+Si despejamos $\cos(\theta)$, tenemos:
+$$
+\cos(\theta) = \sqrt{1 - \sin^2(\theta)}
+$$
+Reemplazando en la integral:
+$$
+\int \frac{\cos(\theta) }{\sqrt{1 - \sin^2(\theta)}}  d\theta = \int \frac{\cos{( \theta )}}{\cos{( \theta )}}  d\theta
+$$
+$$
+\int 1 d\theta = \theta + C
+$$
+
+##
+Ahora tenemos que volver a la variable original, para eso, recordemos la relación que teníamos entre $x$ y $\theta$:
+$$
+x = 4 \sin(\theta)
+$$
+Despejando $\theta$ tenemos:
+$$
+\sin(\theta) = \frac{x}{4}
+$$
+$$
+\theta = \arcsin{\left(\frac{x}{4}\right)}
+$$
+Reemplazando en el resultado:
+$$
+\int \frac{1}{\sqrt{16 - x^2}} dx = \arcsin{\left(\frac{x}{4}\right)} + C
+$$
+
+## Ejercicio 1
+¿Y si hubieramos sido el cateto opuesto? Realiza el mismo proceso, pero asumiendo que el cateto opuesto es $\sqrt{16 - x^2}$.
+
+
+::: {style="text-align:center; width:100%; margin-left: auto; margin-right: auto;"}
+![](./6.png)
+:::

@@ -1,0 +1,16 @@
+*.html
+*.css
+*.js
+*.png
+*.jpeg
+*.jpg
+*.gif
+*.GIF
+*.map
+*.yml
+*.webp
+LICENSE
+*.woff
+*.ttf
+*.eot
+.ignore
