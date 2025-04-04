@@ -6,8 +6,8 @@
 <script src="class_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="class_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="class_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="class_files/libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.33">
+<link href="class_files/libs/quarto-html/quarto-syntax-highlighting-6c21014d9765ba549c6ebad95917e4d7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.6">
 
   <meta name="author" content="Flavio Jara L.">
   <title>Integrales: Sustitución trigonométrica y fracciones parciales</title>
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="class_files/libs/revealjs/dist/theme/quarto-85b1feb8ec970ded495406fe56a514bd.css">
+  <link rel="stylesheet" href="class_files/libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -584,11 +584,149 @@ A = -\frac{4}{3} \hspace{1cm} B = \frac{1}{3} \hspace{1cm} C = 1
 </span> <span class="math display">
 \frac{4}{x(x+3)(x-1)} = -\frac{4}{3x} + \frac{1}{3(x+3)} + \frac{1}{x-1}
 </span></p>
-<p>Para comprobar que esto esté correcto, podemos sumar las fracciones parciales y ver si obtenemos la fracción original: <span class="math display">
--\frac{4}{3x} + \frac{1}{3(x+3)} + \frac{1}{x-1} = \frac{-4(x+3)(x-1) + x(x-1) + 3x}{3x(x+3)(x-1)}
+<p>Reemplazamos esto en la integral original y aplicamos linealidad: <span class="math display">
+\int \frac{4}{x(x+3)(x-1)} dx = \int -\frac{4}{3x} dx + \int \frac{1}{3(x+3)} dx + \int \frac{1}{x-1} dx
+</span> <span class="math display">
+= -\frac{4}{3} \int \frac{1}{x} dx + \frac{1}{3} \int \frac{1}{x+3} dx + \int \frac{1}{x-1} dx
 </span></p>
-
+<p><span class="math display">
+= -\frac{4}{3} \ln{|x|} + \frac{1}{3} \ln{|x+3|} + \ln{|x-1|} + C
+</span></p>
+</section>
+<section id="ejercicio-3" class="slide level2">
+<h2>Ejercicio 3</h2>
+<p>Resuelve la siguiente integral usando fracciones parciales: <span class="math display">
+\int \frac{4x -2}{(x^2+1)(x^2 -2x+2)} dx
+</span></p>
+</section>
+<section id="section-30" class="slide level2">
+<h2></h2>
+<p>Esta expresión no es factorizable, por lo que tendremos que descomponerla en fracciones parciales tal que así:</p>
+<p><span class="math display">
+\frac{4x -2}{(x^2+1)(x^2 -2x+2)} = \frac{Ax + B}{x^2 + 1} + \frac{Cx + D}{x^2 - 2x + 2}
+</span> Multiplicando ambos lados por el denominador común: <span class="math display">
+4x - 2 = (Ax + B)(x^2 - 2x + 2) + (Cx + D)(x^2 + 1)
+</span> Desarrollando: <span class="math display">
+4x - 2 = Ax^3 - 2Ax^2 + 2Ax + Bx^2 - 2Bx + 2B + Cx^3 + Cx + Dx^2 + D
+</span> Agrupando términos: <span class="math display">
+4x - 2 = (A + C)x^3 + (-2A + B + D)x^2 + (2A - 2B + C)x + (2B + D)
+</span></p>
+</section>
+<section id="section-31" class="slide level2">
+<h2></h2>
+<p>Igualando los coeficientes:</p>
+<p><span class="math display">
+0x^3 + 0x^2 + 4x - 2 = (A + C)x^3 + (-2A + B + D)x^2 + (2A - 2B + C)x + (2B + D)
+</span> Esto nos da el siguiente sistema de ecuaciones: <span class="math display">
+A + C = 0 \hspace{1cm} (1)
+</span> <span class="math display">
+-2A + B + D = 0 \hspace{1cm} (2)
+</span> <span class="math display">
+2A - 2B + C = 4 \hspace{1cm} (3)
+</span> <span class="math display">
+2B + D = -2 \hspace{1cm} (4)
+</span></p>
+<p>De la ecuación (3), podemos despejar <span class="math inline">2A</span>: <span class="math display">
+2A = 4 + 2B - C \hspace{1cm} (3)
+</span></p>
+</section>
+<section id="section-32" class="slide level2">
+<h2></h2>
+<p>Podemos reemplazar esto en la ecuación (2): <span class="math display">
+-\left({4 + 2B - C}\right) + B + D = 0
+</span> <span class="math display">
+-4 - 2B + C + B + D = 0
+</span> <span class="math display">
+- B + C + D = 4
+</span> Despejemos <span class="math inline">D</span> en la ecuación (4) y reemplazemos en la ecuación anterior: <span class="math display">
+D = -2 - 2B \hspace{1cm} (4)
+</span> <span class="math display">
+-B + C - 2 - 2B = 4
+</span> <span class="math display">
+-C - 3B = 6
+</span> De aqui podemos despejar <span class="math inline">C</span>: <span class="math display">
+C = -6 - 3B \hspace{1cm} (5)
+</span></p>
+</section>
+<section id="section-33" class="slide level2">
+<h2></h2>
+<p>Reemplazando en la ecuación (3):</p>
+<p><span class="math display">
+2A - 2B + C = 4
+</span> <span class="math display">
+2A - 2B + (-6 - 3B) = 4
+</span> Recordemos que <span class="math inline">A = -C</span> (de la ecuación (1)), por lo que podemos reemplazar <span class="math inline">A</span>:</p>
+<p><span class="math display">
+2(-C) - 2B - 6 - 3B = 4
+</span> Ya que <span class="math inline">C = -6 - 3B</span>, podemos reemplazarlo: <span class="math display">
+2(-(-6 - 3B)) - 2B - 6 - 3B = 4
+</span> <span class="math display">
+12 + 6B - 2B - 6 - 3B = 4
+</span> <span class="math display">
+6B - 2B - 3B = -2
+</span> <span class="math display">
+B = -2
+</span></p>
+</section>
+<section id="section-34" class="slide level2">
+<h2></h2>
+<p>Con esto podemos calcular <span class="math inline">C</span> y <span class="math inline">D</span>: <span class="math display">
+C = -6 - 3B
+</span> <span class="math display">
+C = -6 - 3(-2) = -6 + 6 = 0
+</span> Si <span class="math inline">C = 0</span>, entonces <span class="math inline">A = 0</span> (de la ecuación (1)): <span class="math display">
+A = -C = 0
+</span> Finalmente, para <span class="math inline">D</span>: <span class="math display">
+D = -2 - 2B
+</span> <span class="math display">
+D = -2 - 2(-2) = -2 + 4 = 2
+</span></p>
 </section></section>
+<section>
+<section id="en-resumen" class="title-slide slide level1 center">
+<h1>En resumen</h1>
+<p><span class="math display">
+A = 0 \hspace{1cm} B = -2 \hspace{1cm} C = 0 \hspace{1cm} D = 2
+</span> Reemplazando en la descomposición de fracciones parciales:</p>
+</section>
+<section id="section-35" class="slide level2">
+<h2></h2>
+<p><span class="math display">
+\frac{4x -2}{(x^2+1)(x^2 -2x+2)} = \frac{Ax + B}{x^2 + 1} + \frac{Cx + D}{x^2 - 2x + 2}
+</span> <span class="math display">
+\frac{4x -2}{(x^2+1)(x^2 -2x+2)} = \frac{-2}{x^2 + 1} + \frac{2}{x^2 - 2x + 2}
+</span></p>
+<p>Ahora podemos reemplazar esto en la integral original y aplicar linealidad: <span class="math display">
+\int \frac{4x -2}{(x^2+1)(x^2 -2x+2)} dx = \int \frac{-2}{x^2 + 1} dx + \int \frac{2}{x^2 - 2x + 2} dx
+</span> La primera integral es una integral conocida: <span class="math display">
+\int \frac{-2}{x^2 + 1} dx = -2 \tan^{-1}(x) + C
+</span></p>
+</section>
+<section id="section-36" class="slide level2">
+<h2></h2>
+<p>La segunda integral es un poco más complicada, pero podemos completar el cuadrado en el denominador: <span class="math display">
+x^2 - 2x + 2 = (x-1)^2 + 1
+</span> <span class="math display">
+\int \frac{2}{(x-1)^2 + 1} dx
+</span> Si sustituimos <span class="math inline">u = x - 1</span> y <span class="math inline">du = dx</span>, la integral se convierte en: <span class="math display">
+\int \frac{2}{u^2 + 1} du
+</span> La cual es la que acabamos de hacer: <span class="math display">
+\int \frac{2}{u^2 + 1} du = 2 \tan^{-1}(u) + C
+</span></p>
+</section>
+<section id="section-37" class="slide level2">
+<h2></h2>
+<p>Volviendo a la variable original: <span class="math display">
+\int \frac{2}{(x-1)^2 + 1} dx = 2 \tan^{-1}(x-1) + C
+</span></p>
+<p>El resultado final sería la suma de ambas integrales: <span class="math display">
+\int \frac{4x -2}{(x^2+1)(x^2 -2x+2)} dx = -2 \tan^{-1}(x) + 2 \tan^{-1}(x-1) + C
+</span></p>
+</section></section>
+<section id="gracias-por-su-atención" class="title-slide slide level1 center">
+<h1>Gracias por su atención</h1>
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -864,8 +1002,6 @@ A = -\frac{4}{3} \hspace{1cm} B = \frac{1}{3} \hspace{1cm} C = 1
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
