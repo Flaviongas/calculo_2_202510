@@ -68,7 +68,10 @@ Permiten deducir las sustitución en vez de memorizarlas.
 ## Ejemplo
 $$ \int \frac{1}{\sqrt{16 - x^2}} dx $$
 
-El denominador se parece al despeje de un cateto, no importa si es el cateto opuesto o adyacente, lo importante es que se parece a la raíz cuadrada de una resta. ##
+El denominador se parece al despeje de un cateto, no importa si es el cateto opuesto o adyacente, lo importante es que se parece a la raíz cuadrada de una resta.
+
+##
+
 Asumimos que el cateto adyacente es $\sqrt{16 -x^2}$, esto se parece a el despeje de $a$ (el cateto adyacente), por lo tanto, podemos escribir:
 
 $$

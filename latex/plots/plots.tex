@@ -2,6 +2,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
+\usetikzlibrary{calc}
 \begin{document}
 \begin{tikzpicture}
 \begin{axis}[
@@ -12,19 +13,18 @@
   grid=both,
   xmin=-30,xmax=30,
   ymin=-30,ymax=30,
-  width=10cm, % Control the display size
+  width=10cm,
   height=10cm,
   ]
 
 \coordinate (O) at (0,0);
 \coordinate (A) at (130:15);
-\coordinate (B) at (A) + (130:15);
-\coordinate (C) at (130:15);
+
+% \coordinate (C) at (130:15);
 
 
-\draw[->, thick, red] (O) -- (130:15) node[midway, above] {$\vec{r_a}$};
+\draw[->, thick, red] (O) -- (A) node[midway, above] {$\vec{r_a}$};
 \draw [->, thick, fill=black] (A) circle (0.3) node[above] {$A$};
-\draw [->, thick, fill=black] (B) circle (0.3) node[above] {$B$};
 
 \end{axis}
 \end{tikzpicture}
