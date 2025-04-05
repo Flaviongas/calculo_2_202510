@@ -154,14 +154,18 @@ b = \sqrt{c^2 - a^2}
 <section id="ejemplo" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo">Ejemplo</h2>
 <p><span class="math display">\[ \int \frac{1}{\sqrt{16 - x^2}} dx \]</span></p>
-<p>El denominador se parece al despeje de un cateto, no importa si es el cateto opuesto o adyacente, lo importante es que se parece a la raíz cuadrada de una resta. ## Asumimos que el cateto adyacente es <span class="math inline">\(\sqrt{16 -x^2}\)</span>, esto se parece a el despeje de <span class="math inline">\(a\)</span> (el cateto adyacente), por lo tanto, podemos escribir:</p>
+<p>El denominador se parece al despeje de un cateto, no importa si es el cateto opuesto o adyacente, lo importante es que se parece a la raíz cuadrada de una resta.</p>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"></h2>
+<p>Asumimos que el cateto adyacente es <span class="math inline">\(\sqrt{16 -x^2}\)</span>, esto se parece a el despeje de <span class="math inline">\(a\)</span> (el cateto adyacente), por lo tanto, podemos escribir:</p>
 <p><span class="math display">\[
 \sqrt{16 - x^2} \cong \sqrt{c^2 - b^2}
 \]</span></p>
 <p>De aquí podemos deducir que <span class="math inline">\(c = 4\)</span> y <span class="math inline">\(b = x\)</span>.</p>
 </section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2"></h2>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3"></h2>
 <p>Por lo tanto, podemos armar el siguiente triángulo:</p>
 <div style="text-align:center; width:40%; margin-left: auto; margin-right: auto;">
 <p><img src="./5.png" class="img-fluid"></p>
@@ -172,8 +176,8 @@ b = \sqrt{c^2 - a^2}
 x = 4 \sin(\theta)
 \]</span></p>
 </section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3"></h2>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4"></h2>
 <p>Esta relación por si misma no nos sirve de nada, pero si la derivamos, podemos obtener una relación entre <span class="math inline">\(dx\)</span> y <span class="math inline">\(d\theta\)</span>: <span class="math display">\[
 x = 4 \sin(\theta)
 \]</span> <span class="math display">\[
@@ -185,8 +189,8 @@ dx = 4 \cos(\theta) d\theta
 4 \int \frac{\cos(\theta) }{\sqrt{16 - 16 \sin^2(\theta)}}  d\theta
 \]</span></p>
 </section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4"></h2>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5"></h2>
 <p>Sacando el factor común de la raíz: <span class="math display">\[
 4 \int \frac{\cos(\theta) }{\sqrt{16(1 - \sin^2(\theta))}}  d\theta
 \]</span> <span class="math display">\[
@@ -198,8 +202,8 @@ dx = 4 \cos(\theta) d\theta
 \int \frac{\cos(\theta) }{\sqrt{1 - \sin^2(\theta)}}  d\theta
 \]</span></p>
 </section>
-<section id="section-5" class="level2">
-<h2 class="anchored" data-anchor-id="section-5"></h2>
+<section id="section-6" class="level2">
+<h2 class="anchored" data-anchor-id="section-6"></h2>
 <p>Recordemos la identidad: <span class="math display">\[
 \sin^2(\theta) + \cos^2(\theta) = 1
 \]</span> Si despejamos <span class="math inline">\(\cos(\theta)\)</span>, tenemos: <span class="math display">\[
@@ -210,8 +214,8 @@ dx = 4 \cos(\theta) d\theta
 \int 1 d\theta = \theta + C
 \]</span></p>
 </section>
-<section id="section-6" class="level2">
-<h2 class="anchored" data-anchor-id="section-6"></h2>
+<section id="section-7" class="level2">
+<h2 class="anchored" data-anchor-id="section-7"></h2>
 <p>Ahora tenemos que volver a la variable original, para eso, recordemos la relación que teníamos entre <span class="math inline">\(x\)</span> y <span class="math inline">\(\theta\)</span>: <span class="math display">\[
 x = 4 \sin(\theta)
 \]</span> Despejando <span class="math inline">\(\theta\)</span> tenemos: <span class="math display">\[
@@ -229,8 +233,8 @@ x = 4 \sin(\theta)
 <p><img src="./6.png" class="img-fluid"></p>
 </div>
 </section>
-<section id="section-7" class="level2">
-<h2 class="anchored" data-anchor-id="section-7"></h2>
+<section id="section-8" class="level2">
+<h2 class="anchored" data-anchor-id="section-8"></h2>
 <p>Usando el teorema de Pitágoras, podemos deducir que: <span class="math display">\[
 b = \sqrt{c^2 - a^2} \cong \sqrt{16 - x^2}
 \]</span> Por lo que <span class="math inline">\(c\)</span> es la hipotenusa, <span class="math inline">\(a\)</span> es el cateto opuesto y <span class="math inline">\(b\)</span> es el cateto adyacente. <span class="math display">\[
@@ -241,8 +245,8 @@ c = 4 \hspace{0.3cm} a = 4
 <p><img src="./7.png" class="img-fluid"></p>
 </div>
 </section>
-<section id="section-8" class="level2">
-<h2 class="anchored" data-anchor-id="section-8"></h2>
+<section id="section-9" class="level2">
+<h2 class="anchored" data-anchor-id="section-9"></h2>
 <p>Ahora podemos utilizar una función trigonométrica para relacionar el cateto restante con la hipotenusa: <span class="math display">\[
 \cos(\theta) = \frac{x}{4}
 \]</span> Despejando <span class="math inline">\(x\)</span> tenemos: <span class="math display">\[
@@ -251,8 +255,8 @@ x = 4 \cos(\theta)
 dx = -4 \sin(\theta) d\theta
 \]</span></p>
 </section>
-<section id="section-9" class="level2">
-<h2 class="anchored" data-anchor-id="section-9"></h2>
+<section id="section-10" class="level2">
+<h2 class="anchored" data-anchor-id="section-10"></h2>
 <p>Reemplazando en la integral: <span class="math display">\[
 \int \frac{1}{\sqrt{16 - x^2}} dx = \int \frac{1}{\sqrt{16 - (4 \cos(\theta))^2}} (-4 \sin(\theta)) d\theta
 \]</span> Desarrollando la raíz: <span class="math display">\[
@@ -261,8 +265,8 @@ dx = -4 \sin(\theta) d\theta
 4 \int \frac{-\sin(\theta) }{\sqrt{16(1 - \cos^2(\theta))}}  d\theta
 \]</span></p>
 </section>
-<section id="section-10" class="level2">
-<h2 class="anchored" data-anchor-id="section-10"></h2>
+<section id="section-11" class="level2">
+<h2 class="anchored" data-anchor-id="section-11"></h2>
 <p>Sacando el factor común de la raíz: <span class="math display">\[
 4 \int \frac{-\sin(\theta) }{4 \sqrt{1 - \cos^2(\theta)}}  d\theta
 \]</span> <span class="math display">\[
@@ -273,8 +277,8 @@ dx = -4 \sin(\theta) d\theta
 \sin(\theta) = \sqrt{1 - \cos^2(\theta)}
 \]</span></p>
 </section>
-<section id="section-11" class="level2">
-<h2 class="anchored" data-anchor-id="section-11"></h2>
+<section id="section-12" class="level2">
+<h2 class="anchored" data-anchor-id="section-12"></h2>
 <p>Reemplazando en la integral: <span class="math display">\[
 \int \frac{-\sin(\theta) }{\sqrt{1 - \cos^2(\theta)}}  d\theta = \int \frac{-\sin{( \theta )}}{\sin{( \theta )}}  d\theta
 \]</span> <span class="math display">\[
@@ -286,8 +290,8 @@ x = 4 \cos(\theta)
 \cos(\theta) = \frac{x}{4}
 \]</span></p>
 </section>
-<section id="section-12" class="level2">
-<h2 class="anchored" data-anchor-id="section-12"></h2>
+<section id="section-13" class="level2">
+<h2 class="anchored" data-anchor-id="section-13"></h2>
 <p>Despejando <span class="math inline">\(\theta\)</span> tenemos: <span class="math display">\[
 \theta = \arccos{\left(\frac{x}{4}\right)}
 \]</span> Por lo que reemplazando en el resultado: <span class="math display">\[
@@ -310,8 +314,8 @@ x = 4 \cos(\theta)
 \int \frac{dx}{( x^2 + 4 )^{3/2}}
 \]</span></p>
 </section>
-<section id="section-13" class="level2">
-<h2 class="anchored" data-anchor-id="section-13"></h2>
+<section id="section-14" class="level2">
+<h2 class="anchored" data-anchor-id="section-14"></h2>
 <p>Inmediatamente podemos ver que el denominador se parece a la raíz cuadrada de una suma, por lo que podemos asumir que es la hipotenusa de un triángulo rectángulo. Por lo que podemos deducir que: <span class="math display">\[
 \sqrt{x^2 + 4} \cong \sqrt{a^2 + b^2}
 \]</span> Por lo que <span class="math inline">\(a = x\)</span> (cateto adyacente) y <span class="math inline">\(b = 2\)</span> (cateto opuesto).</p>
@@ -319,8 +323,8 @@ x = 4 \cos(\theta)
 <p><img src="./9.png" class="img-fluid"></p>
 </div>
 </section>
-<section id="section-14" class="level2">
-<h2 class="anchored" data-anchor-id="section-14"></h2>
+<section id="section-15" class="level2">
+<h2 class="anchored" data-anchor-id="section-15"></h2>
 <p>Basados en esto podemos usar la relación trigonométrica: <span class="math display">\[
 \tan(\theta) = \frac{2}{x}
 \]</span> Despejando <span class="math inline">\(x\)</span> tenemos: <span class="math display">\[
@@ -330,8 +334,8 @@ x = \frac{2}{\tan(\theta)}
 <p><img src="./10.png" class="img-fluid"></p>
 </div>
 </section>
-<section id="section-15" class="level2">
-<h2 class="anchored" data-anchor-id="section-15"></h2>
+<section id="section-16" class="level2">
+<h2 class="anchored" data-anchor-id="section-16"></h2>
 <p>Ahora, usando tangente nuevamente, tenemos: <span class="math display">\[
 \tan(\theta) = \frac{x}{2}
 \]</span> Despejando <span class="math inline">\(x\)</span> tenemos: <span class="math display">\[
@@ -344,8 +348,8 @@ dx = 2 \sec^2(\theta) d\theta
 \int \frac{2 \sec^2(\theta) d\theta}{( (2 \tan(\theta))^2 + 4 )^{3/2}}
 \]</span></p>
 </section>
-<section id="section-16" class="level2">
-<h2 class="anchored" data-anchor-id="section-16"></h2>
+<section id="section-17" class="level2">
+<h2 class="anchored" data-anchor-id="section-17"></h2>
 <p>Desarrollando el denominador: <span class="math display">\[
 \int \frac{2 \sec^2(\theta) d\theta}{( 4 \tan^2(\theta) + 4 )^{3/2}}
 \]</span> Sacando el factor común: <span class="math display">\[
@@ -356,8 +360,8 @@ dx = 2 \sec^2(\theta) d\theta
 \frac{2}{8} \int \frac{\sec^2(\theta) d\theta}{( \tan^2(\theta) + 1 )^{3/2}}
 \]</span></p>
 </section>
-<section id="section-17" class="level2">
-<h2 class="anchored" data-anchor-id="section-17"></h2>
+<section id="section-18" class="level2">
+<h2 class="anchored" data-anchor-id="section-18"></h2>
 <p><span class="math display">\[
 \frac{1}{4} \int \frac{\sec^2(\theta) d\theta}{( \tan^2(\theta) + 1 )^{3/2}}
 \]</span> Para este ejercicio, hay una identidad trigonométrica que nos puede ayudar: <span class="math display">\[
@@ -368,8 +372,8 @@ dx = 2 \sec^2(\theta) d\theta
 \frac{1}{4} \int \frac{( 1 + \tan^2(\theta) ) d\theta}{( 1 + \tan^2(\theta) )^{3/2}}
 \]</span></p>
 </section>
-<section id="section-18" class="level2">
-<h2 class="anchored" data-anchor-id="section-18"></h2>
+<section id="section-19" class="level2">
+<h2 class="anchored" data-anchor-id="section-19"></h2>
 <p><span class="math display">\[
 \frac{1}{4} \int \frac{( 1 + \tan^2(\theta) ) d\theta}{( 1 + \tan^2(\theta) )^{3/2}} = \frac{1}{4} \int ( 1 + \tan^2(\theta) )^{-1/2} d\theta
 \]</span> Usamos la misma identidad:</p>
@@ -383,8 +387,8 @@ dx = 2 \sec^2(\theta) d\theta
 \frac{1}{4} \int \frac{1}{\sec(\theta)} d\theta
 \]</span></p>
 </section>
-<section id="section-19" class="level2">
-<h2 class="anchored" data-anchor-id="section-19"></h2>
+<section id="section-20" class="level2">
+<h2 class="anchored" data-anchor-id="section-20"></h2>
 <p>Recordemos la definición de secante: <span class="math display">\[
 \sec(\theta) = \frac{1}{\cos(\theta)}
 \]</span> Por lo que podemos escribir: <span class="math display">\[
@@ -393,8 +397,8 @@ dx = 2 \sec^2(\theta) d\theta
 \frac{1}{4} \int \cos(\theta) d\theta = \frac{1}{4} \sin(\theta) + C
 \]</span></p>
 </section>
-<section id="section-20" class="level2">
-<h2 class="anchored" data-anchor-id="section-20"></h2>
+<section id="section-21" class="level2">
+<h2 class="anchored" data-anchor-id="section-21"></h2>
 <p>Ahora tenemos que volver a la variable original, para eso, podemos usar el mismo triangulo:</p>
 <div style="text-align:center; width:37%; margin-left: auto; margin-right: auto;">
 <p><img src="./10.png" class="img-fluid"></p>
@@ -403,8 +407,8 @@ dx = 2 \sec^2(\theta) d\theta
 \sin(\theta) = \frac{x}{\sqrt{x^2 + 4}}
 \]</span></p>
 </section>
-<section id="section-21" class="level2">
-<h2 class="anchored" data-anchor-id="section-21"></h2>
+<section id="section-22" class="level2">
+<h2 class="anchored" data-anchor-id="section-22"></h2>
 <p>Reemplazando en el resultado: <span class="math display">\[
 \int \frac{dx}{( x^2 + 4 )^{3/2}} = \frac{1}{4} \sin(\theta) + C
 \]</span> <span class="math display">\[
@@ -415,8 +419,8 @@ dx = 2 \sec^2(\theta) d\theta
 <section id="fracciones-parciales" class="level1">
 <h1>Fracciones Parciales</h1>
 <p>Las fracciones parciales son una técnica utilizada para descomponer una función racional en una suma de fracciones más simples. Esta técnica es especialmente útil para resolver integrales que involucran funciones racionales.</p>
-<section id="section-22" class="level2">
-<h2 class="anchored" data-anchor-id="section-22"></h2>
+<section id="section-23" class="level2">
+<h2 class="anchored" data-anchor-id="section-23"></h2>
 <section id="caso-1" class="level4">
 <h4 class="anchored" data-anchor-id="caso-1">Caso 1</h4>
 <p>Denominador lineal (grado menor al del denominador) <span class="math display">\[
@@ -436,8 +440,8 @@ dx = 2 \sec^2(\theta) d\theta
 \]</span></p>
 </section>
 </section>
-<section id="section-23" class="level2">
-<h2 class="anchored" data-anchor-id="section-23"></h2>
+<section id="section-24" class="level2">
+<h2 class="anchored" data-anchor-id="section-24"></h2>
 <section id="caso-4" class="level4">
 <h4 class="anchored" data-anchor-id="caso-4">Caso 4</h4>
 <p>Denominador cuadrático irreducible repetido <span class="math display">\[
@@ -449,8 +453,8 @@ dx = 2 \sec^2(\theta) d\theta
 <h2 class="anchored" data-anchor-id="ejemplo-1">Ejemplo</h2>
 <p><span class="math display">\[ \int \frac{4}{x^3 + 2x^2 - 3x} dx \]</span></p>
 </section>
-<section id="section-24" class="level2">
-<h2 class="anchored" data-anchor-id="section-24"></h2>
+<section id="section-25" class="level2">
+<h2 class="anchored" data-anchor-id="section-25"></h2>
 <p>Primero, factorizamos el denominador: <span class="math display">\[
 x^3 + 2x^2 - 3x = x(x^2 + 2x - 3) = x(x+3)(x-1)
 \]</span> Reescribiendo la integral:</p>
@@ -462,8 +466,8 @@ x^3 + 2x^2 - 3x = x(x^2 + 2x - 3) = x(x+3)(x-1)
 4 = A(x+3)(x-1) + Bx(x-1) + Cx(x+3)
 \]</span></p>
 </section>
-<section id="section-25" class="level2">
-<h2 class="anchored" data-anchor-id="section-25"></h2>
+<section id="section-26" class="level2">
+<h2 class="anchored" data-anchor-id="section-26"></h2>
 <p>Desarrollamos: <span class="math display">\[
 4 = A(x^2 + 2x - 3) + B(x^2 - x) + C(x^2 + 3x)
 \]</span> <span class="math display">\[
@@ -474,8 +478,8 @@ x^3 + 2x^2 - 3x = x(x^2 + 2x - 3) = x(x+3)(x-1)
 0x^2 + 0x + 4 = (A + B + C)x^2 + (2A - B + 3C)x + (-3A)
 \]</span></p>
 </section>
-<section id="section-26" class="level2">
-<h2 class="anchored" data-anchor-id="section-26"></h2>
+<section id="section-27" class="level2">
+<h2 class="anchored" data-anchor-id="section-27"></h2>
 <p>Esto nos da un sistema de ecuaciones: <span class="math display">\[
 A + B + C = 0 \hspace{1cm} (1)
 \]</span> <span class="math display">\[
@@ -490,8 +494,8 @@ A = -\frac{4}{3}
 2\left(-\frac{4}{3}\right) - B + 3C = 0 \hspace{1cm} (2)
 \]</span></p>
 </section>
-<section id="section-27" class="level2">
-<h2 class="anchored" data-anchor-id="section-27"></h2>
+<section id="section-28" class="level2">
+<h2 class="anchored" data-anchor-id="section-28"></h2>
 <p>Aqui, podemos despejar cuaquier variable en cualquier ecuación restante, por ejemplo <span class="math inline">\(B\)</span> en la ecuación (1):</p>
 <p><span class="math display">\[
 B = \frac{4}{3} - C \hspace{1cm} (1)
@@ -505,8 +509,8 @@ B = \frac{4}{3} - C \hspace{1cm} (1)
 4C = 4 \rightarrow C = 1
 \]</span></p>
 </section>
-<section id="section-28" class="level2">
-<h2 class="anchored" data-anchor-id="section-28"></h2>
+<section id="section-29" class="level2">
+<h2 class="anchored" data-anchor-id="section-29"></h2>
 <p>Ahora que tenemos C, podemos reemplazarlo en el despeje de <span class="math inline">\(B\)</span> de la ecuación (1): <span class="math display">\[
 B = \frac{4}{3} - C
 \]</span> <span class="math display">\[
@@ -521,8 +525,8 @@ B = \frac{1}{3}
 A = -\frac{4}{3} \hspace{1cm} B = \frac{1}{3} \hspace{1cm} C = 1
 \]</span></p>
 </section>
-<section id="section-29" class="level2">
-<h2 class="anchored" data-anchor-id="section-29"></h2>
+<section id="section-30" class="level2">
+<h2 class="anchored" data-anchor-id="section-30"></h2>
 <p>Reemplazando en la descomposición de fracciones parciales: <span class="math display">\[
 \frac{4}{x(x+3)(x-1)} = \frac{-\frac{4}{3}}{x} + \frac{\frac{1}{3}}{x+3} + \frac{1}{x-1}
 \]</span> <span class="math display">\[
@@ -543,8 +547,8 @@ A = -\frac{4}{3} \hspace{1cm} B = \frac{1}{3} \hspace{1cm} C = 1
 \int \frac{4x -2}{(x^2+1)(x^2 -2x+2)} dx
 \]</span></p>
 </section>
-<section id="section-30" class="level2">
-<h2 class="anchored" data-anchor-id="section-30"></h2>
+<section id="section-31" class="level2">
+<h2 class="anchored" data-anchor-id="section-31"></h2>
 <p>Esta expresión no es factorizable, por lo que tendremos que descomponerla en fracciones parciales tal que así:</p>
 <p><span class="math display">\[
 \frac{4x -2}{(x^2+1)(x^2 -2x+2)} = \frac{Ax + B}{x^2 + 1} + \frac{Cx + D}{x^2 - 2x + 2}
@@ -556,8 +560,8 @@ A = -\frac{4}{3} \hspace{1cm} B = \frac{1}{3} \hspace{1cm} C = 1
 4x - 2 = (A + C)x^3 + (-2A + B + D)x^2 + (2A - 2B + C)x + (2B + D)
 \]</span></p>
 </section>
-<section id="section-31" class="level2">
-<h2 class="anchored" data-anchor-id="section-31"></h2>
+<section id="section-32" class="level2">
+<h2 class="anchored" data-anchor-id="section-32"></h2>
 <p>Igualando los coeficientes:</p>
 <p><span class="math display">\[
 0x^3 + 0x^2 + 4x - 2 = (A + C)x^3 + (-2A + B + D)x^2 + (2A - 2B + C)x + (2B + D)
@@ -574,8 +578,8 @@ A + C = 0 \hspace{1cm} (1)
 2A = 4 + 2B - C \hspace{1cm} (3)
 \]</span></p>
 </section>
-<section id="section-32" class="level2">
-<h2 class="anchored" data-anchor-id="section-32"></h2>
+<section id="section-33" class="level2">
+<h2 class="anchored" data-anchor-id="section-33"></h2>
 <p>Podemos reemplazar esto en la ecuación (2): <span class="math display">\[
 -\left({4 + 2B - C}\right) + B + D = 0
 \]</span> <span class="math display">\[
@@ -592,8 +596,8 @@ D = -2 - 2B \hspace{1cm} (4)
 C = -6 - 3B \hspace{1cm} (5)
 \]</span></p>
 </section>
-<section id="section-33" class="level2">
-<h2 class="anchored" data-anchor-id="section-33"></h2>
+<section id="section-34" class="level2">
+<h2 class="anchored" data-anchor-id="section-34"></h2>
 <p>Reemplazando en la ecuación (3):</p>
 <p><span class="math display">\[
 2A - 2B + C = 4
@@ -612,8 +616,8 @@ C = -6 - 3B \hspace{1cm} (5)
 B = -2
 \]</span></p>
 </section>
-<section id="section-34" class="level2">
-<h2 class="anchored" data-anchor-id="section-34"></h2>
+<section id="section-35" class="level2">
+<h2 class="anchored" data-anchor-id="section-35"></h2>
 <p>Con esto podemos calcular <span class="math inline">\(C\)</span> y <span class="math inline">\(D\)</span>: <span class="math display">\[
 C = -6 - 3B
 \]</span> <span class="math display">\[
@@ -632,8 +636,8 @@ D = -2 - 2(-2) = -2 + 4 = 2
 <p><span class="math display">\[
 A = 0 \hspace{1cm} B = -2 \hspace{1cm} C = 0 \hspace{1cm} D = 2
 \]</span> Reemplazando en la descomposición de fracciones parciales:</p>
-<section id="section-35" class="level2">
-<h2 class="anchored" data-anchor-id="section-35"></h2>
+<section id="section-36" class="level2">
+<h2 class="anchored" data-anchor-id="section-36"></h2>
 <p><span class="math display">\[
 \frac{4x -2}{(x^2+1)(x^2 -2x+2)} = \frac{Ax + B}{x^2 + 1} + \frac{Cx + D}{x^2 - 2x + 2}
 \]</span> <span class="math display">\[
@@ -645,8 +649,8 @@ A = 0 \hspace{1cm} B = -2 \hspace{1cm} C = 0 \hspace{1cm} D = 2
 \int \frac{-2}{x^2 + 1} dx = -2 \tan^{-1}(x) + C
 \]</span></p>
 </section>
-<section id="section-36" class="level2">
-<h2 class="anchored" data-anchor-id="section-36"></h2>
+<section id="section-37" class="level2">
+<h2 class="anchored" data-anchor-id="section-37"></h2>
 <p>La segunda integral es un poco más complicada, pero podemos completar el cuadrado en el denominador: <span class="math display">\[
 x^2 - 2x + 2 = (x-1)^2 + 1
 \]</span> <span class="math display">\[
@@ -657,8 +661,8 @@ x^2 - 2x + 2 = (x-1)^2 + 1
 \int \frac{2}{u^2 + 1} du = 2 \tan^{-1}(u) + C
 \]</span></p>
 </section>
-<section id="section-37" class="level2">
-<h2 class="anchored" data-anchor-id="section-37"></h2>
+<section id="section-38" class="level2">
+<h2 class="anchored" data-anchor-id="section-38"></h2>
 <p>Volviendo a la variable original: <span class="math display">\[
 \int \frac{2}{(x-1)^2 + 1} dx = 2 \tan^{-1}(x-1) + C
 \]</span></p>
