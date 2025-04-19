@@ -1,8 +1,12 @@
-\documentclass{standalone}
+\documentclass{article}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
 \usetikzlibrary{calc}
+\definecolor{nice_blue}{HTML}{4A8FE7}
+\definecolor{nice_pink}{HTML}{DB3069}
+\definecolor{nice_orange}{HTML}{FF9505}
+\definecolor{nice_green}{HTML}{688B58}
 \begin{document}
 \begin{tikzpicture}
 \begin{axis}[
@@ -19,13 +23,20 @@
 
 \coordinate (O) at (0,0);
 \coordinate (A) at (130:15);
+\coordinate (B) at (8.4,21.9);
+\coordinate (C) at (24.8,17.5);
 
-% \coordinate (C) at (130:15);
 
 
-\draw[->, thick, red] (O) -- (A) node[midway, above] {$\vec{r_a}$};
 \draw [->, thick, fill=black] (A) circle (0.3) node[above] {$A$};
+\draw [->, thick, fill=black] (O) circle (0.3) node[above] {$E$};
+\draw [->, thick, fill=black] (B) circle (0.3) node[above] {$B$};
+\draw [->, thick, fill=black] (C) circle (0.3) node[above] {$C$};
 
+% \draw[->, thick, nice_blue] (O) -- (A) node[midway, below] {$\vec{r_a}$};
+\draw[->, thick, nice_pink] (A) -- (B) node[midway, below] {$\vec{r_{ab}}$};
+\draw[->, thick, nice_orange] (B) -- (C) node[midway, above] {$\vec{r_{bc}}$};
+\draw[->, thick, nice_green] (C) -- (O) node[midway, below] {$\vec{r_{ce}}$};
 \end{axis}
 \end{tikzpicture}
 \end{document}
