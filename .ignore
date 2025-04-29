@@ -14,3 +14,10 @@ LICENSE
 *.ttf
 *.eot
 .ignore
+*.log
+*.aux
+*.out
+*.toc
+*.fls
+*.synctex.gz
+*.fdb_latexmk
