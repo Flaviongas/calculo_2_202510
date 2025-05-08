@@ -216,3 +216,83 @@ $$A = \left[ \frac{3}{4} - \frac{2}{3} \right]$$
 $$A = \left[ \frac{9}{12} - \frac{8}{12} \right]$$
 $$A = \frac{1}{12}$$
 
+## Ejercicio 6
+Determina el número  tal que la recta $y=b$  divide a la región delimitada por las curvas $y=x^2$  e $y=4$ en dos regiones de igual área.
+
+::: {style="text-align:center; width:70%; margin-left: auto; margin-right: auto;"}
+![](./9.png)
+:::
+
+##
+Primero encontremos el área total entre las dos curvas. Conseguimos los límites de integración al igualar ambas funciones:
+$$x^2 = 4$$
+$$x = \sqrt{4}$$
+$$x = 2$$
+$$x = -2$$
+Restamos la función superior menos la inferior:
+$$A = \int_{-2}^{2} (4 - x^2) dx$$
+
+##
+$$A = \left[ 4x - \frac{x^3}{3} \right]_{-2}^{2}$$
+$$A = \left[ 4(2) - \frac{(2)^3}{3} \right] - \left[ 4(-2) - \frac{(-2)^3}{3} \right]$$
+$$A = \left[ 8 - \frac{8}{3} \right] - \left[ -8 + \frac{8}{3} \right]$$
+$$A = \left[ 8 - \frac{8}{3} + 8 - \frac{8}{3} \right]$$
+$$A = \left[ 16 - \frac{16}{3} \right]$$
+$$A = \left[ \frac{48}{3} - \frac{16}{3} \right]$$
+
+##
+$$A = \frac{32}{3}$$
+Nos preguntan por el valor de $b$ tal que el área entre la recta y la parábola sea la mitad del área total.
+$$\frac{A}{2} = \frac{32}{3} \cdot \frac{1}{2} = \frac{16}{3}$$
+
+El area entre la nueva recta y la parabola debe ser $\frac{16}{3}$.
+$$A = \int (b - x^2) dx = \frac{16}{3}$$
+
+##
+Para integrar esto necesitamos los límites de integración. Estos son los puntos de intersección entre la recta y la parábola.
+$$b = x^2$$
+$$x = \sqrt{b}$$
+$$x = -\sqrt{b}$$
+Integramos entre $-\sqrt{b}$ y $\sqrt{b}$:
+$$\int_{-\sqrt{b}}^{\sqrt{b}} (b - x^2) dx = \frac{16}{3}$$
+$$\int_{-\sqrt{b}}^{\sqrt{b}} b dx - \int_{-\sqrt{b}}^{\sqrt{b}} x^2 dx = \frac{16}{3}$$
+
+##
+$$\left[ b x \right]_{-\sqrt{b}}^{\sqrt{b}} - \left[ \frac{x^3}{3} \right]_{-\sqrt{b}}^{\sqrt{b}} = \frac{16}{3}$$
+$$\left[ b \sqrt{b} - b (-\sqrt{b}) \right] - \left[ \frac{(\sqrt{b})^3}{3} - \frac{(-\sqrt{b})^3}{3} \right] = \frac{16}{3}$$
+$$\left[ b \sqrt{b} + b \sqrt{b} \right] - \left[ \frac{b^{\frac{3}{2}}}{3} + \frac{b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}$$
+$$\left[ 2b \sqrt{b} - \frac{2b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}$$
+$$\left[ 2b^{\frac{3}{2}} - \frac{2b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}$$
+
+##
+$$\left[ \frac{6b^{\frac{3}{2}} - 2b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}$$
+$$\left[ \frac{4b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}$$
+$$4b^{\frac{3}{2}} = 16$$
+$$b^{\frac{3}{2}} = 4$$
+$$b = 4^{\frac{2}{3}}$$
+$$b = \sqrt[3]{16}$$
+
+##
+Por lo que el valor de $b$ es $\sqrt[3]{16}$. Para comprobar esto, podemos calcular el área entre la recta y la parábola.
+$$A = \int_{-\sqrt[6]{16}}^{\sqrt[6]{16}} (b - x^2) dx$$
+$$A = \int_{-\sqrt[6]{16}}^{\sqrt[6]{16}} \left( \sqrt[3]{16} - x^2 \right) dx$$
+$$A = \left[ \sqrt[3]{16} x - \frac{x^3}{3} \right]_{-\sqrt[6]{16}}^{\sqrt[6]{16}}$$
+$$A = \left[ \sqrt[3]{16} \sqrt[6]{16} - \frac{(\sqrt[6]{16})^3}{3} \right] - \left[ \sqrt[3]{16} (-\sqrt[6]{16}) - \frac{(-\sqrt[6]{16})^3}{3} \right]$$
+
+##
+$$A = \left[ 4 - \frac{\sqrt{16}}{3} \right] - \left[ -4 + \frac{\sqrt{16}}{3} \right]$$
+$$A = \left[ 4 - \frac{4}{3} + 4 - \frac{4}{3} \right]$$
+$$A = \left[ 8 - \frac{8}{3} \right]$$
+$$A = \left[ \frac{24}{3} - \frac{8}{3} \right]$$
+$$A = \frac{16}{3}$$
+
+##
+Efectivamente el área entre la recta y la parábola es $\frac{16}{3}$.
+
+::: {style="text-align:center; width:70%; margin-left: auto; margin-right: auto;"}
+![](./10.png)
+:::
+
+# Gracias por su atención
+
+

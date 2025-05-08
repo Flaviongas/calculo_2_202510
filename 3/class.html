@@ -297,6 +297,56 @@ Flavio Jara L.
 <section id="section-22" class="slide level2">
 <h2></h2>
 <p><span class="math display">A = \left[ \frac{1}{4} + \frac{1}{2} - \frac{2}{3} \right]</span> <span class="math display">A = \left[ \frac{1}{4} + \frac{2}{4} - \frac{8}{12} \right]</span> <span class="math display">A = \left[ \frac{3}{4} - \frac{2}{3} \right]</span> <span class="math display">A = \left[ \frac{9}{12} - \frac{8}{12} \right]</span> <span class="math display">A = \frac{1}{12}</span></p>
+</section>
+<section id="ejercicio-6" class="slide level2">
+<h2>Ejercicio 6</h2>
+<p>Determina el número tal que la recta <span class="math inline">y=b</span> divide a la región delimitada por las curvas <span class="math inline">y=x^2</span> e <span class="math inline">y=4</span> en dos regiones de igual área.</p>
+<div style="text-align:center; width:70%; margin-left: auto; margin-right: auto;">
+<p><img data-src="./9.png"></p>
+</div>
+</section>
+<section id="section-23" class="slide level2">
+<h2></h2>
+<p>Primero encontremos el área total entre las dos curvas. Conseguimos los límites de integración al igualar ambas funciones: <span class="math display">x^2 = 4</span> <span class="math display">x = \sqrt{4}</span> <span class="math display">x = 2</span> <span class="math display">x = -2</span> Restamos la función superior menos la inferior: <span class="math display">A = \int_{-2}^{2} (4 - x^2) dx</span></p>
+</section>
+<section id="section-24" class="slide level2">
+<h2></h2>
+<p><span class="math display">A = \left[ 4x - \frac{x^3}{3} \right]_{-2}^{2}</span> <span class="math display">A = \left[ 4(2) - \frac{(2)^3}{3} \right] - \left[ 4(-2) - \frac{(-2)^3}{3} \right]</span> <span class="math display">A = \left[ 8 - \frac{8}{3} \right] - \left[ -8 + \frac{8}{3} \right]</span> <span class="math display">A = \left[ 8 - \frac{8}{3} + 8 - \frac{8}{3} \right]</span> <span class="math display">A = \left[ 16 - \frac{16}{3} \right]</span> <span class="math display">A = \left[ \frac{48}{3} - \frac{16}{3} \right]</span></p>
+</section>
+<section id="section-25" class="slide level2">
+<h2></h2>
+<p><span class="math display">A = \frac{32}{3}</span> Nos preguntan por el valor de <span class="math inline">b</span> tal que el área entre la recta y la parábola sea la mitad del área total. <span class="math display">\frac{A}{2} = \frac{32}{3} \cdot \frac{1}{2} = \frac{16}{3}</span></p>
+<p>El area entre la nueva recta y la parabola debe ser <span class="math inline">\frac{16}{3}</span>. <span class="math display">A = \int (b - x^2) dx = \frac{16}{3}</span></p>
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
+<p>Para integrar esto necesitamos los límites de integración. Estos son los puntos de intersección entre la recta y la parábola. <span class="math display">b = x^2</span> <span class="math display">x = \sqrt{b}</span> <span class="math display">x = -\sqrt{b}</span> Integramos entre <span class="math inline">-\sqrt{b}</span> y <span class="math inline">\sqrt{b}</span>: <span class="math display">\int_{-\sqrt{b}}^{\sqrt{b}} (b - x^2) dx = \frac{16}{3}</span> <span class="math display">\int_{-\sqrt{b}}^{\sqrt{b}} b dx - \int_{-\sqrt{b}}^{\sqrt{b}} x^2 dx = \frac{16}{3}</span></p>
+</section>
+<section id="section-27" class="slide level2">
+<h2></h2>
+<p><span class="math display">\left[ b x \right]_{-\sqrt{b}}^{\sqrt{b}} - \left[ \frac{x^3}{3} \right]_{-\sqrt{b}}^{\sqrt{b}} = \frac{16}{3}</span> <span class="math display">\left[ b \sqrt{b} - b (-\sqrt{b}) \right] - \left[ \frac{(\sqrt{b})^3}{3} - \frac{(-\sqrt{b})^3}{3} \right] = \frac{16}{3}</span> <span class="math display">\left[ b \sqrt{b} + b \sqrt{b} \right] - \left[ \frac{b^{\frac{3}{2}}}{3} + \frac{b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}</span> <span class="math display">\left[ 2b \sqrt{b} - \frac{2b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}</span> <span class="math display">\left[ 2b^{\frac{3}{2}} - \frac{2b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}</span></p>
+</section>
+<section id="section-28" class="slide level2">
+<h2></h2>
+<p><span class="math display">\left[ \frac{6b^{\frac{3}{2}} - 2b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}</span> <span class="math display">\left[ \frac{4b^{\frac{3}{2}}}{3} \right] = \frac{16}{3}</span> <span class="math display">4b^{\frac{3}{2}} = 16</span> <span class="math display">b^{\frac{3}{2}} = 4</span> <span class="math display">b = 4^{\frac{2}{3}}</span> <span class="math display">b = \sqrt[3]{16}</span></p>
+</section>
+<section id="section-29" class="slide level2">
+<h2></h2>
+<p>Por lo que el valor de <span class="math inline">b</span> es <span class="math inline">\sqrt[3]{16}</span>. Para comprobar esto, podemos calcular el área entre la recta y la parábola. <span class="math display">A = \int_{-\sqrt[6]{16}}^{\sqrt[6]{16}} (b - x^2) dx</span> <span class="math display">A = \int_{-\sqrt[6]{16}}^{\sqrt[6]{16}} \left( \sqrt[3]{16} - x^2 \right) dx</span> <span class="math display">A = \left[ \sqrt[3]{16} x - \frac{x^3}{3} \right]_{-\sqrt[6]{16}}^{\sqrt[6]{16}}</span> <span class="math display">A = \left[ \sqrt[3]{16} \sqrt[6]{16} - \frac{(\sqrt[6]{16})^3}{3} \right] - \left[ \sqrt[3]{16} (-\sqrt[6]{16}) - \frac{(-\sqrt[6]{16})^3}{3} \right]</span></p>
+</section>
+<section id="section-30" class="slide level2">
+<h2></h2>
+<p><span class="math display">A = \left[ 4 - \frac{\sqrt{16}}{3} \right] - \left[ -4 + \frac{\sqrt{16}}{3} \right]</span> <span class="math display">A = \left[ 4 - \frac{4}{3} + 4 - \frac{4}{3} \right]</span> <span class="math display">A = \left[ 8 - \frac{8}{3} \right]</span> <span class="math display">A = \left[ \frac{24}{3} - \frac{8}{3} \right]</span> <span class="math display">A = \frac{16}{3}</span></p>
+</section>
+<section id="section-31" class="slide level2">
+<h2></h2>
+<p>Efectivamente el área entre la recta y la parábola es <span class="math inline">\frac{16}{3}</span>.</p>
+<div style="text-align:center; width:70%; margin-left: auto; margin-right: auto;">
+<p><img data-src="./10.png"></p>
+</div>
+</section>
+<section id="gracias-por-su-atención" class="title-slide slide level1 center">
+<h1>Gracias por su atención</h1>
 
 </section>
     </div>
