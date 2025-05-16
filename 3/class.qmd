@@ -7,7 +7,7 @@ format:
 
 
 ## Ejercicio 1
-Grafica las regiones encerradas por cada una de las curvas dadas. Decida si integra con respecto a  ó . Determina el área de la región:
+Grafica las regiones encerradas por cada una de las curvas dadas. Decida si integra con respecto a x ó y. Determina el área de la región:
 $$y= {e} ^ {x} , y= {x} ^ {2} -1, x=-1 , x=1 $$
 
 ##

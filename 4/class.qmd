@@ -103,3 +103,58 @@ $$ A = 16 - \frac{16}{3} $$
 $$ A = \frac{48}{3} - \frac{16}{3} $$
 $$ A = \frac{32}{3} $$
 
+
+## Ejercicio 3
+Calcula el área de la región encerrada entre las curvas:
+$$ y = \cos(\pi x) \quad y = 4x^2 - 1 $$
+
+##
+
+
+::: {style="text-align:center; width:100%; margin-left: auto; margin-right: auto;"}
+![](./4.png)
+:::
+No nos dan los límites de integración, por lo que debemos calcular los puntos de intersección entre las dos funciones.
+Para esto igualamos las funciones:
+$$ \cos(\pi x) = 4x^2 - 1 $$
+$$ 4x^2 - \cos(\pi x) = 1 $$
+Esta ecuación no tiene solución analítica, por lo que debemos probar valores.
+
+##
+Dado que los valores de cos van de 0 a 1, podemos encontrar valores de $x$ que sumen 1.
+$$ x = 0 \quad y = 4(0)^2 - 1 = -1 $$
+$$ x = 1 \quad y = 4(1)^2 - 1 = 3 $$
+$$ x = 0.5 \quad y = 4(0.5)^2 - 1 = 0 $$
+$$ x = 0.25 \quad y = 4(0.25)^2 - 1 = -0.5 $$
+$$ x = 0.75 \quad y = 4(0.75)^2 - 1 = 2.5 $$
+$$ x = -0.5 \quad y = 4(-0.5)^2 - 1 = 0$$
+
+##
+Los puntos de intersección son:
+$$ x = 0.5 \quad x = -0.5 $$
+Por lo que la integral va de $-0.5$ a $0.5$.
+La función superior es $cos(\pi x)$ y la inferior es $4x^2 - 1$.
+$$ A = \int_{-0.5}^{0.5} (\cos(\pi x) - (4x^2 - 1)) dx $$
+$$ \int_{-0.5}^{0.5} (\cos(\pi x) + 1 - 4x^2) dx $$
+$$ \frac{sen(\pi x)}{\pi} + x - \frac{4x^3}{3} \bigg|_{-0.5}^{0.5} $$
+
+##
+$$ \frac{\sin(\pi (0.5))}{\pi} + 0.5 - \frac{4(0.5)^3}{3} - \left(\frac{\sin(\pi (-0.5))}{\pi} - 0.5 + \frac{4(-0.5)^3}{3}\right) $$
+
+Simplificando:
+
+$$ = \frac{\sin\left(\frac{\pi}{2}\right)}{\pi} + 0.5 - \frac{0.5}{3} - \left(\frac{\sin\left(-\frac{\pi}{2}\right)}{\pi} - 0.5 - \frac{-0.5}{3}\right) $$
+
+$$ = \frac{1}{\pi} + \frac{1}{2} - \frac{1}{6} - \left(\frac{-1}{\pi} - \frac{1}{2} + \frac{1}{6}\right) $$
+
+$$
+= \frac{1}{\pi} + \frac{1}{3} - \left(\frac{-1}{\pi} - \frac{1}{3}\right) $$
+
+$$
+= \frac{1}{\pi} + \frac{1}{3} + \frac{1}{\pi} + \frac{1}{3} $$
+
+$$
+= \frac{2}{\pi} + \frac{2}{3}
+$$
+
+## Ejercicio 4

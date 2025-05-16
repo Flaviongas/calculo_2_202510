@@ -6,8 +6,8 @@
 <script src="class_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="class_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="class_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="class_files/libs/quarto-html/quarto-syntax-highlighting-6c21014d9765ba549c6ebad95917e4d7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.6">
+<link href="class_files/libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.33">
 
   <meta name="author" content="Flavio Jara L.">
   <title>Repaso Prueba 2</title>
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="class_files/libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
+  <link rel="stylesheet" href="class_files/libs/revealjs/dist/theme/quarto-85b1feb8ec970ded495406fe56a514bd.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -216,6 +216,42 @@ Flavio Jara L.
 <section id="section-9" class="slide level2">
 <h2></h2>
 <p><span class="math display"> A = 8 - \frac{8}{3} + 8 - \frac{-8}{3} </span> <span class="math display"> A = 16 - \frac{8}{3} - \frac{8}{3} </span> <span class="math display"> A = 16 - \frac{16}{3} </span> <span class="math display"> A = \frac{48}{3} - \frac{16}{3} </span> <span class="math display"> A = \frac{32}{3} </span></p>
+</section>
+<section id="ejercicio-3" class="slide level2">
+<h2>Ejercicio 3</h2>
+<p>Calcula el área de la región encerrada entre las curvas: <span class="math display"> y = \cos(\pi x) \quad y = 4x^2 - 1 </span></p>
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<div style="text-align:center; width:100%; margin-left: auto; margin-right: auto;">
+<p><img data-src="./4.png"></p>
+</div>
+<p>No nos dan los límites de integración, por lo que debemos calcular los puntos de intersección entre las dos funciones. Para esto igualamos las funciones: <span class="math display"> \cos(\pi x) = 4x^2 - 1 </span> <span class="math display"> 4x^2 - \cos(\pi x) = 1 </span> Esta ecuación no tiene solución analítica, por lo que debemos probar valores.</p>
+</section>
+<section id="section-11" class="slide level2">
+<h2></h2>
+<p>Dado que los valores de cos van de 0 a 1, podemos encontrar valores de <span class="math inline">x</span> que sumen 1. <span class="math display"> x = 0 \quad y = 4(0)^2 - 1 = -1 </span> <span class="math display"> x = 1 \quad y = 4(1)^2 - 1 = 3 </span> <span class="math display"> x = 0.5 \quad y = 4(0.5)^2 - 1 = 0 </span> <span class="math display"> x = 0.25 \quad y = 4(0.25)^2 - 1 = -0.5 </span> <span class="math display"> x = 0.75 \quad y = 4(0.75)^2 - 1 = 2.5 </span> <span class="math display"> x = -0.5 \quad y = 4(-0.5)^2 - 1 = 0</span></p>
+</section>
+<section id="section-12" class="slide level2">
+<h2></h2>
+<p>Los puntos de intersección son: <span class="math display"> x = 0.5 \quad x = -0.5 </span> Por lo que la integral va de <span class="math inline">-0.5</span> a <span class="math inline">0.5</span>. La función superior es <span class="math inline">cos(\pi x)</span> y la inferior es <span class="math inline">4x^2 - 1</span>. <span class="math display"> A = \int_{-0.5}^{0.5} (\cos(\pi x) - (4x^2 - 1)) dx </span> <span class="math display"> \int_{-0.5}^{0.5} (\cos(\pi x) + 1 - 4x^2) dx </span> <span class="math display"> \frac{sen(\pi x)}{\pi} + x - \frac{4x^3}{3} \bigg|_{-0.5}^{0.5} </span></p>
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<p><span class="math display"> \frac{\sin(\pi (0.5))}{\pi} + 0.5 - \frac{4(0.5)^3}{3} - \left(\frac{\sin(\pi (-0.5))}{\pi} - 0.5 + \frac{4(-0.5)^3}{3}\right) </span></p>
+<p>Simplificando:</p>
+<p><span class="math display"> = \frac{\sin\left(\frac{\pi}{2}\right)}{\pi} + 0.5 - \frac{0.5}{3} - \left(\frac{\sin\left(-\frac{\pi}{2}\right)}{\pi} - 0.5 - \frac{-0.5}{3}\right) </span></p>
+<p><span class="math display"> = \frac{1}{\pi} + \frac{1}{2} - \frac{1}{6} - \left(\frac{-1}{\pi} - \frac{1}{2} + \frac{1}{6}\right) </span></p>
+<p><span class="math display">
+= \frac{1}{\pi} + \frac{1}{3} - \left(\frac{-1}{\pi} - \frac{1}{3}\right) </span></p>
+<p><span class="math display">
+= \frac{1}{\pi} + \frac{1}{3} + \frac{1}{\pi} + \frac{1}{3} </span></p>
+<p><span class="math display">
+= \frac{2}{\pi} + \frac{2}{3}
+</span></p>
+</section>
+<section id="ejercicio-4" class="slide level2">
+<h2>Ejercicio 4</h2>
 
 </section>
     </div>
@@ -493,6 +529,8 @@ Flavio Jara L.
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
