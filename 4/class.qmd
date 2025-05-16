@@ -13,3 +13,93 @@ include-in-header:
       }
       </style>
 ---
+
+## Ejercicio 1
+Calcular el área de la región determinada por:
+$$ y = e^x \quad y = xe^x \quad x = 0 $$
+
+##
+::: {style="text-align:center; width:70%; margin-left: auto; margin-right: auto;"}
+![](./1.png)
+:::
+
+## 
+Buscamos el punto de intersección entre las dos funciones:
+$$ e^x = xe^x $$
+$$ e^x(1-x) = 0 $$
+$$ x = 1 $$
+
+Por lo que la integral va de $0$ a $1$.
+
+
+
+La función superior es $e^x$ y la inferior es $xe^x$.
+$$ A = \int_0^1 (e^x - xe^x) dx $$
+
+##
+
+::: {style="text-align:center; width:100%; margin-left: auto; margin-right: auto;"}
+![](./2.png)
+:::
+
+##
+$$ A = \int_0^1 e^x - \int_0^1 xe^x dx $$
+La segunda integral se resuelve por partes:
+$$ \int u dv = uv - \int v du $$
+Definimos las variables:
+$$ u = x \quad dv = e^x dx $$
+$$ du = dx \quad v = e^x $$
+Sustituyendo en la integral:
+$$ \int xe^x dx = xe^x - \int e^x dx $$
+
+##
+$$ \int xe^x dx = xe^x - e^x $$
+Por lo que la integral original queda:
+$$ e^x - (xe^x - e^x) \bigg|_0^1 $$
+$$ e^x - xe^x + e^x \bigg|_0^1 $$
+$$ 2e^x - xe^x \bigg|_0^1 $$
+$$ 2e^1 - 1e^1 - (2e^0 - 0e^0) $$
+
+##
+$$ 2e - e - 2 = e - 2 $$
+$$ \approx 0.72$$
+
+## Ejercicio 2
+Calcula el área de la región encerrada entre las curvas:
+$$ x = 2y^2 \quad x = 4 + y^2 $$
+
+##
+
+
+::: {style="text-align:center; width:70%; margin-left: auto; margin-right: auto;"}
+![](./3.png)
+:::
+
+Inmediatamente, podemos ver que esta área no es calculable con la integral en $x$, ya que las áreas se cancelan.
+Por lo que debemos calcular el área en $y$.
+
+##
+Para calcular la integral en $y$, debemos despejar las funciones, pero no es necesario en este caso.
+
+Tenemos que encontrar los puntos de intersección en $y$ entre las dos funciones, para esto igualamos las funciones:
+$$ 2y^2 = 4 + y^2 $$
+$$ 2y^2 - y^2 = 4 $$
+$$ y^2 = 4 $$
+$$ y = 2 \quad y = -2 $$
+Por lo que la integral va de $-2$ a $2$, y la función superior es $4 + y^2$.
+
+##
+
+$$ A = \int_{-2}^2 (4 + y^2 - 2y^2) dy $$
+$$ A = \int_{-2}^2 (4 - y^2) dy $$
+$$ A = \int_{-2}^2 4 dy - \int_{-2}^2 y^2 dy $$
+$$ A = 4y - \frac{y^3}{3} \bigg|_{-2}^2 $$
+$$ A = 4(2) - \frac{(2)^3}{3} - (4(-2) - \frac{(-2)^3}{3}) $$
+
+##
+$$ A = 8 - \frac{8}{3} + 8 - \frac{-8}{3} $$
+$$ A = 16 - \frac{8}{3} - \frac{8}{3} $$
+$$ A = 16 - \frac{16}{3} $$
+$$ A = \frac{48}{3} - \frac{16}{3} $$
+$$ A = \frac{32}{3} $$
+
