@@ -10,7 +10,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    enviroment: clases
+    environment: clases
 
     steps:
     - name: Tailscale
