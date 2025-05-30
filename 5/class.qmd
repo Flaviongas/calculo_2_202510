@@ -2,16 +2,7 @@
 title: Integrales impropias y Criterio de Convergencia
 author: "Flavio Jara L."
 format:
-  revealjs:
-      transition: zoom
-      html-math-method: katex
-include-in-header:
-  - text: |
-      <style>
-      p,ul {
-        font-size: 0.70em;
-      }
-      </style>
+  html
 ---
 
 ## ¿Qué es una integral impropia?
@@ -177,3 +168,49 @@ $$ = \lim_{a \to 1^+} \left( 2\sqrt{4 - 1} - 2\sqrt{a - 1} \right) $$
 $$ = \lim_{a \to 1^+} \left( 2\sqrt{3} - 2\sqrt{a - 1} \right) $$
 $$ = 2\sqrt{3} - 2\sqrt{0} $$
 $$ = 2\sqrt{3} $$
+
+## Criterio de Comparación
+El criterio de comparación es una herramienta útil para determinar la convergencia o divergencia de integrales impropias. Se basa en comparar la integral que estamos evaluando con otra integral conocida cuya convergencia o divergencia ya se ha establecido.
+
+Sean $f(x)$ y $g(x)$ funciones continuas y con $f(x) \geq g(x) > 0$ para todo $x \geq a$, donde $a$ es un número real. Entonces:
+
+- Si $\int_{a}^{\infty} f(x) \, dx$ converge, entonces $\int_{a}^{\infty} g(x) \, dx$ también converge.
+- Si $\int_{a}^{\infty} g(x) \, dx$ diverge, entonces $\int_{a}^{\infty} f(x) \, dx$ también diverge.
+
+##
+
+
+::: {style="text-align:center; width:100%; margin-left: auto; margin-right: auto;"}
+![](./9.png)
+:::
+
+## Ejercicio 6
+Demuestre que la integral siguiente converge:
+$$ \int_{0}^{\infty} e^{-x^2} \, dx $$
+
+##
+Primero, podemos separar la integral impropia en dos partes:
+$$ \int_{0}^{\infty} e^{-x^2} \, dx = \int_{0}^{1} e^{-x^2} \, dx + \int_{1}^{\infty} e^{-x^2} \, dx $$
+La primera parte, $\int_{0}^{1} e^{-x^2} \, dx$, es una integral definida y converge porque la función $e^{-x^2}$ es continua y acotada en el intervalo $[0, 1]$.
+La segunda parte, $\int_{1}^{\infty} e^{-x^2} \, dx$, es una integral impropia. Para evaluar su convergencia, podemos usar el criterio de comparación. Observamos que para $x \geq 1$, $e^{-x^2} < e^{-x}$, por lo que podemos comparar con la integral conocida:
+$$ \int_{1}^{\infty} e^{-x} \, dx $$
+
+##
+
+Esta integral converge, ya que:
+$$ \int_{1}^{\infty} e^{-x} \, dx = \lim_{b \to \infty} \left[ -e^{-x} \right]_{1}^{b} = \lim_{b \to \infty} (-e^{-b} + e^{-1}) = 0 + e^{-1} = e^{-1} $$
+
+Por lo tanto, por el criterio de comparación, la integral $\int_{1}^{\infty} e^{-x^2} \, dx$ también converge.
+
+## Ejercicio 7
+Demuestre que la integral siguiente converge o diverge:
+$$ \int_{\pi}^{\infty} \frac{1 + \sin(x)}{x^2} \, dx $$
+
+##
+Tenemos que encontrar una función $g(x)$ que sea más simple y que nos permita aplicar el criterio de comparación. Observamos que:
+$$ \frac{1 + \sin(x)}{x^2} \leq \frac{2}{x^2} $$
+Verificamos que $\frac{1 + \sin(x)}{x^2}$ es positiva y acotada por $\frac{2}{x^2}$ para $x \geq \pi$. Ahora, evaluamos la integral:
+$$ \int_{\pi}^{\infty} \frac{2}{x^2} \, dx = 2 \lim_{b \to \infty} \left[ -\frac{1}{x} \right]_{\pi}^{b} = 2 \lim_{b \to \infty} \left( -\frac{1}{b} + \frac{1}{\pi} \right) = 0 + \frac{2}{\pi} = \frac{2}{\pi} $$
+Por lo tanto, la integral $\int_{\pi}^{\infty} \frac{1 + \sin(x)}{x^2} \, dx$ converge por el criterio de comparación.
+
+# Gracias por su atención
