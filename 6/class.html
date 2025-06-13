@@ -8,7 +8,7 @@
 
 <meta name="author" content="Flavio Jara L.">
 
-<title>Integrales impropias y Criterio de Convergencia</title>
+<title>Series de Potencia</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,7 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="class_files/libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="class_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="class_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="class_files/libs/bootstrap/bootstrap-a4df69a959544299c1807e2bda9e5473.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="class_files/libs/bootstrap/bootstrap-337537296cb1cd14b16560ccb035787b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -76,7 +76,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Integrales impropias y Criterio de Convergencia</h1>
+<h1 class="title">Series de Potencia</h1>
 </div>
 
 
@@ -99,163 +99,141 @@ window.Quarto = {
 </header>
 
 
-<section id="qué-es-una-integral-impropia" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-una-integral-impropia">¿Qué es una integral impropia?</h2>
-<p>Una integral impropia es una integral definida en un intervalo que no es acotado o que tiene una discontinuidad en uno de sus extremos. Estas integrales pueden ser convergentes o divergentes, dependiendo del comportamiento de la función integranda. Hay dos tipos principales de integrales impropias:</p>
-<ol type="1">
-<li><p><strong>Integrales con límites infinitos</strong>: Estas integrales tienen uno o ambos límites de integración como infinito. Por ejemplo, <span class="math inline">\(\int_{a}^{\infty} f(x) \, dx\)</span> o <span class="math inline">\(\int_{-\infty}^{b} f(x) \, dx\)</span>.</p></li>
-<li><p><strong>Integrales con discontinuidades</strong>: Estas integrales tienen un punto de discontinuidad en el intervalo de integración. Por ejemplo, <span class="math inline">\(\int_{a}^{b} f(x) \, dx\)</span> donde <span class="math inline">\(f(x)\)</span> tiene una discontinuidad en algún punto dentro del intervalo <span class="math inline">\([a, b]\)</span>.</p></li>
-</ol>
+<section id="series" class="level2">
+<h2 class="anchored" data-anchor-id="series">Series</h2>
+<p>Una serie es la suma de los términos de una sucesión. Si la sucesión es infinita, la serie es infinita. Una serie infinita es una suma de la forma: <span class="math display">\[ s_n = \sum_{i=1}^{n} a_i = a_1 + a_2 + a_3 + \ldots + a_n \]</span></p>
 </section>
-<section id="tipo-1" class="level2">
-<h2 class="anchored" data-anchor-id="tipo-1">Tipo 1</h2>
-<p><span class="math display">\[ \int_{a}^{\infty} \frac{1}{x^2} \, dx \]</span></p>
-<div style="text-align:center; width:70%; margin-left: auto; margin-right: auto;">
-<p><img src="./1.png" class="img-fluid"></p>
-</div>
+<section id="convergencia-y-divergencia" class="level2">
+<h2 class="anchored" data-anchor-id="convergencia-y-divergencia">Convergencia y Divergencia</h2>
+<p>Una serie infinita puede converger o divergir. Una serie converge si la suma de sus términos se aproxima a un número finito a medida que se suman más términos. Si no, la serie diverge.</p>
+<p>Si la sucesión <span class="math inline">\(s_n\)</span> converge, es decir que existe un número real <span class="math inline">\(S\)</span> tal que: <span class="math display">\[ \lim_{n \to \infty} s_n = S \]</span> entonces decimos que la serie converge a <span class="math inline">\(S\)</span> y escribimos: <span class="math display">\[ \sum_{i=1}^{\infty} a_i = S \]</span></p>
 </section>
-<section id="tipo-2" class="level2">
-<h2 class="anchored" data-anchor-id="tipo-2">Tipo 2</h2>
-<p><span class="math display">\[ \int_{0}^{4} \frac{1}{(x-1)^2} \, dx \]</span></p>
-<div style="text-align:center; width:50%; margin-left: auto; margin-right: auto;">
-<p><img src="./2.png" class="img-fluid"></p>
-</div>
+<section id="series-de-potencia" class="level2">
+<h2 class="anchored" data-anchor-id="series-de-potencia">Series de Potencia</h2>
+<p>Una serie de potencia es una serie de la forma: <span class="math display">\[ \sum_{n=0}^{\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \ldots \]</span></p>
 </section>
-<section id="ejercicio-1" class="level2">
-<h2 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h2>
-<p>Calcular la integral impropia: <span class="math display">\[ \int_{e}^{\infty} \frac{3}{x} \, dx \]</span></p>
+<section id="criterios-de-convergencia" class="level2">
+<h2 class="anchored" data-anchor-id="criterios-de-convergencia">Criterios de Convergencia</h2>
+<p>Existen varios criterios para determinar la convergencia de series de potencia, entre ellos:</p>
+<ul>
+<li><strong>Criterio de la razón</strong>: Si existe el límite <span class="math display">\[ L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| \]</span> y <span class="math inline">\(L &lt; 1\)</span>, entonces la serie converge absolutamente. Si <span class="math inline">\(L &gt; 1\)</span>, la serie diverge. Si <span class="math inline">\(L = 1\)</span>, el criterio es inconcluso.</li>
+<li><strong>Criterio de la raíz</strong>: Si existe el límite <span class="math display">\[ L = \lim_{n \to \infty} \sqrt[n]{|a_n|} \]</span> y <span class="math inline">\(L &lt; 1\)</span>, entonces la serie converge absolutamente. Si <span class="math inline">\(L &gt; 1\)</span>, la serie diverge. Si <span class="math inline">\(L = 1\)</span>, el criterio es inconcluso.</li>
+</ul>
 </section>
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section"></h2>
-<div style="text-align:center; width:70%; margin-left: auto; margin-right: auto;">
-<p><img src="./3.png" class="img-fluid"></p>
-</div>
+<ul>
+<li><strong>Criterio de comparación</strong>: Si <span class="math inline">\(0 \leq a_n \leq b_n\)</span> para todo <span class="math inline">\(n\)</span> y <span class="math display">\[\sum_{n=1}^{\infty} b_n\]</span> converge, entonces <span class="math display">\[\sum_{n=1}^{\infty} a_n\]</span> también converge. Si <span class="math inline">\(\sum_{n=1}^{\infty} a_n\)</span> diverge, entonces <span class="math inline">\(\sum_{n=1}^{\infty} b_n\)</span> también diverge.</li>
+</ul>
 </section>
 <section id="section-1" class="level2">
 <h2 class="anchored" data-anchor-id="section-1"></h2>
-<p>Redefinimos la integral impropia como el límite de una integral definida: <span class="math display">\[ \int_{e}^{\infty} \frac{3}{x} \, dx = \lim_{b \to \infty} \int_{e}^{b} \frac{3}{x} \, dx \]</span> Ahora, calculamos la integral definida: <span class="math display">\[ \int_{e}^{b} \frac{3}{x} \, dx = 3 \ln|x| \Big|_{e}^{b} = 3 (\ln|b| - \ln|e|) = 3 \ln\left(\frac{b}{e}\right) \]</span> Ahora, tomamos el límite cuando <span class="math inline">\(b\)</span> tiende a infinito: <span class="math display">\[ \lim_{b \to \infty} 3 \ln\left(\frac{b}{e}\right) = 3 \lim_{b \to \infty} (\ln b - 1) = 3 \cdot \infty = \infty \]</span></p>
+<ul>
+<li><strong>Criterio del n-ésimo término</strong>: Si <span class="math inline">\(\lim_{n \to \infty} a_n \neq 0\)</span> o no existe, entonces la serie <span class="math inline">\(\sum_{n=1}^{\infty} a_n\)</span> diverge. Si <span class="math inline">\(\lim_{n \to \infty} a_n = 0\)</span>, el criterio es inconcluso.</li>
+</ul>
+</section>
+<section id="series-geométricas" class="level2">
+<h2 class="anchored" data-anchor-id="series-geométricas">Series Geométricas</h2>
+<p>Una serie geométrica es una serie de potencia donde cada término es un múltiplo constante del anterior. La forma general de una serie geométrica es: <span class="math display">\[ \sum_{n=1}^{\infty} a r^{n-1} = a + ar + ar^2 + ar^3 + \ldots \]</span> donde <span class="math inline">\(a\)</span> es el primer término y <span class="math inline">\(r\)</span> es la razón común. La serie converge si <span class="math inline">\(|r| &lt; 1\)</span> y su suma es: <span class="math display">\[ S = \frac{a}{1 - r} \]</span></p>
+</section>
+<section id="ejercicio-1" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h2>
+<p>Sea: <span class="math display">\[a_n = \frac{2n}{3n + 1}\]</span></p>
+<ul>
+<li>Determine si <span class="math inline">\({a_n}\)</span> es una sucesión convergente o divergente, en caso de ser convergente, determine su límite.</li>
+<li>Determine si la serie <span class="math inline">\(\sum_{n=1}^{\infty} a_n\)</span> es convergente o divergente, en caso de ser convergente, determine su suma.</li>
+</ul>
+</section>
+<section id="convergencia-de-la-sucesión" class="level2">
+<h2 class="anchored" data-anchor-id="convergencia-de-la-sucesión">Convergencia de la Sucesión</h2>
+<p>Para determinar la convergencia de la sucesión <span class="math inline">\(a_n = \frac{2n}{3n + 1}\)</span>, calculamos el límite cuando <span class="math inline">\(n\)</span> tiende a infinito: <span class="math display">\[ \lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{2n}{3n + 1}\]</span> Dividiendo el numerador y el denominador por <span class="math inline">\(n\)</span>: <span class="math display">\[ \lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{2}{3 + \frac{1}{n}} = \frac{2}{3 + 0} = \frac{2}{3} \]</span> Por lo tanto, la sucesión <span class="math inline">\(a_n\)</span> es convergente y su límite es <span class="math inline">\(\frac{2}{3}\)</span>.</p>
+</section>
+<section id="convergencia-de-la-serie" class="level2">
+<h2 class="anchored" data-anchor-id="convergencia-de-la-serie">Convergencia de la Serie</h2>
+<p>Para determinar la convergencia de la serie <span class="math inline">\(\sum_{n=1}^{\infty} a_n\)</span>, aplicamos el criterio del n-ésimo término: <span class="math display">\[ \lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{2n}{3n + 1} = \frac{2}{3} \]</span> Dado que el límite no es cero, la serie diverge según el criterio del n-ésimo término. Aunque podriamos haberlo intuido al observar que los términos de la serie no tienden a cero, lo que es un indicativo de divergencia.</p>
 </section>
 <section id="ejercicio-2" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h2>
-<p>Calcular la integral impropia: <span class="math display">\[ \int_{-\infty}^{4} \pi \cdot e^{2x} \, dx \]</span></p>
+<p>Dada la siguiente serie: <span class="math display">\[ \sum_{n=1}^{\infty} \frac{3}{5^{n-1}} \]</span></p>
+<ul>
+<li>Determine si la serie es convergente o divergente.</li>
+<li>En caso de ser convergente, determine su suma.</li>
+</ul>
 </section>
 <section id="section-2" class="level2">
 <h2 class="anchored" data-anchor-id="section-2"></h2>
-<div style="text-align:center; width:70%; margin-left: auto; margin-right: auto;">
-<p><img src="./4.png" class="img-fluid"></p>
-</div>
+<p>Para determinar la convergencia de la serie <span class="math inline">\(\sum_{n=1}^{\infty} \frac{3}{5^{n-1}}\)</span>, primero identificamos que es una serie geométrica. Factorizando la serie: <span class="math display">\[ \sum_{n=1}^{\infty} \frac{3}{5^{n-1}} = 3 \sum_{n=1}^{\infty} \frac{1}{5^{n-1}}\]</span> <span class="math display">\[ 3 \sum_{n=1}^{\infty} \frac{1}{5^{n-1}} = 3 \sum_{n=1}^{\infty} \left(\frac{1}{5}\right)^{n-1}\]</span> En base a esto, podemos identificar que la serie es geométrica con <span class="math inline">\(a = 3\)</span> y <span class="math inline">\(r = \frac{1}{5}\)</span>.</p>
 </section>
 <section id="section-3" class="level2">
 <h2 class="anchored" data-anchor-id="section-3"></h2>
-<p>Redefinimos la integral impropia como el límite de una integral definida: <span class="math display">\[ \int_{-\infty}^{4} \pi \cdot e^{2x} \, dx = \lim_{a \to -\infty} \int_{a}^{4} \pi \cdot e^{2x} \, dx \]</span> Integramos: <span class="math display">\[ \int_{a}^{4} \pi \cdot e^{2x} \, dx = \frac{\pi}{2} e^{2x} \Big|_{a}^{4} = \frac{\pi}{2} (e^{8} - e^{2a}) \]</span> Ahora, tomamos el límite cuando <span class="math inline">\(a\)</span> tiende a menos infinito: <span class="math display">\[ \lim_{a \to -\infty} \frac{\pi}{2} (e^{8} - e^{2a}) = \frac{\pi}{2} (e^{8} - 0) = \frac{\pi}{2} e^{8} \]</span></p>
+<p>La serie converge porque <span class="math inline">\(|r| = \frac{1}{5} &lt; 1\)</span>. La suma de una serie geométrica se calcula con la fórmula: <span class="math display">\[ S = \frac{a}{1 - r} \]</span> Sustituyendo los valores: <span class="math display">\[ S = \frac{3}{1 - \frac{1}{5}} = \frac{3}{\frac{4}{5}} = 3 \cdot \frac{5}{4} = \frac{15}{4} \]</span></p>
 </section>
 <section id="ejercicio-3" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h2>
-<p>Calcular la integral impropia: <span class="math display">\[ \int_{- \infty}^{\infty} \frac{5}{x^2 + 1} \, dx \]</span></p>
+<p>Determine si la serie es convergente o divergente. Si es convergente, determine su suma. <span class="math display">\[ \sum_{n=1}^{\infty} \left[ (0.8)^{n-1} - (0.3)^{n} \right] \]</span></p>
 </section>
 <section id="section-4" class="level2">
 <h2 class="anchored" data-anchor-id="section-4"></h2>
-<div style="text-align:center; width:70%; margin-left: auto; margin-right: auto;">
-<p><img src="./5.png" class="img-fluid"></p>
-</div>
+<p>Para determinar la convergencia de la serie <span class="math inline">\(\sum_{n=1}^{\infty} \left[ (0.8)^{n-1} - (0.3)^{n} \right]\)</span>, podemos separar la serie en dos series: <span class="math display">\[ \sum_{n=1}^{\infty} (0.8)^{n-1} - \sum_{n=1}^{\infty} (0.3)^{n} \]</span></p>
+<section id="primera-serie" class="level5">
+<h5 class="anchored" data-anchor-id="primera-serie">Primera serie</h5>
+<p>Podemos reescribir la primera serie como: <span class="math display">\[ \sum_{n=1}^{\infty} (0.8)^{n} = \sum_{n=1}^{\infty} 1\cdot(0.8)^{n} \]</span> Esta es una serie geométrica con <span class="math inline">\(a = 1\)</span> y <span class="math inline">\(r = 0.8\)</span>. La serie converge porque <span class="math inline">\(|r| &lt; 1\)</span>.</p>
+</section>
 </section>
 <section id="section-5" class="level2">
 <h2 class="anchored" data-anchor-id="section-5"></h2>
-<p>Lo separamos en dos integrales impropias: <span class="math display">\[ \int_{- \infty}^{\infty} \frac{5}{x^2 + 1} \, dx = \int_{-\infty}^{0} \frac{5}{x^2 + 1} \, dx + \int_{0}^{\infty} \frac{5}{x^2 + 1} \, dx \]</span> Y cada una de ellas la resolvemos como una integral impropia, empezando por la primera: <span class="math display">\[ \int_{-\infty}^{0} \frac{5}{x^2 + 1} \, dx = \lim_{a \to -\infty} \int_{a}^{0} \frac{5}{x^2 + 1} \, dx \]</span> <span class="math display">\[ = \lim_{a \to -\infty} \left[ 5 \arctan(x) \right]_{a}^{0} \]</span> <span class="math display">\[ = \lim_{a \to -\infty} \left( 5 \arctan(0) - 5 \arctan(a) \right) \]</span></p>
+<p>La suma de la primera serie geométrica es: <span class="math display">\[ S_1 = \frac{1}{1 - 0.8} = \frac{1}{0.2} = 5 \]</span></p>
+<section id="segunda-serie" class="level5">
+<h5 class="anchored" data-anchor-id="segunda-serie">Segunda serie</h5>
+<p>La segunda serie es: <span class="math display">\[ \sum_{n=1}^{\infty} (0.3)^{n} \]</span> Para que tenga la forma de una serie geométrica, podemos reescribirla como: <span class="math display">\[ \sum_{n=1}^{\infty} (0.3)^{n} = \sum_{n=1}^{\infty} (0.3)(0.3)^{n-1} \]</span></p>
+</section>
 </section>
 <section id="section-6" class="level2">
 <h2 class="anchored" data-anchor-id="section-6"></h2>
-<p>Grafiquemos la función <span class="math inline">\(arctan(x)\)</span> para ver su comportamiento en el infinito:</p>
-<div style="text-align:center; width:70%; margin-left: auto; margin-right: auto;">
-<p><img src="./6.png" class="img-fluid"></p>
-</div>
-<p>Se tiende a aproximar a <span class="math inline">\(\frac{\pi}{2}\)</span> cuando <span class="math inline">\(x\)</span> tiende a infinito, por lo tanto: <span class="math display">\[ = \lim_{a \to -\infty} \left( 0 - 5 \cdot \frac{-\pi}{2} \right) \]</span> <span class="math display">\[ = \frac{5\pi}{2} \]</span></p>
+<p>Esta es una serie geométrica con <span class="math inline">\(a = 0.3\)</span> y <span class="math inline">\(r = 0.3\)</span>. La serie converge porque <span class="math inline">\(|r| &lt; 1\)</span>. La suma de la segunda serie geométrica es: <span class="math display">\[ S_2 = \frac{0.3}{1 - 0.3} = \frac{0.3}{0.7} = \frac{3}{7} \]</span></p>
+<section id="suma-de-la-serie-original" class="level4">
+<h4 class="anchored" data-anchor-id="suma-de-la-serie-original">Suma de la serie original</h4>
+<p>La suma de la serie original es: <span class="math display">\[ S = S_1 - S_2 = 5 - \frac{3}{7} = \frac{35}{7} - \frac{3}{7} = \frac{32}{7} \]</span> Por lo tanto, la serie <span class="math inline">\(\sum_{n=1}^{\infty} \left[ (0.8)^{n-1} - (0.3)^{n} \right]\)</span> es convergente y su suma es <span class="math inline">\(\frac{32}{7}\)</span>.</p>
 </section>
-<section id="section-7" class="level2">
-<h2 class="anchored" data-anchor-id="section-7"></h2>
-<p>Ahora resolvemos la segunda integral impropia: <span class="math display">\[ \int_{0}^{\infty} \frac{5}{x^2 + 1} \, dx = \lim_{b \to \infty} \int_{0}^{b} \frac{5}{x^2 + 1} \, dx \]</span> <span class="math display">\[ = \lim_{b \to \infty} \left[ 5 \arctan(x) \right]_{0}^{b} \]</span> <span class="math display">\[ = \lim_{b \to \infty} \left( 5 \arctan(b) - 5 \arctan(0) \right) \]</span> <span class="math display">\[ = \lim_{b \to \infty} \left( 5 \cdot \frac{\pi}{2} - 0 \right) \]</span> <span class="math display">\[ = \frac{5\pi}{2} \]</span></p>
 </section>
-<section id="section-8" class="level2">
-<h2 class="anchored" data-anchor-id="section-8"></h2>
-<p>Entonces la integral impropia original es: <span class="math display">\[ \int_{- \infty}^{\infty} \frac{5}{x^2 + 1} \, dx = \frac{5\pi}{2} + \frac{5\pi}{2} = 5\pi \]</span></p>
+<section id="series-p" class="level2">
+<h2 class="anchored" data-anchor-id="series-p">Series P</h2>
+<p>Las series P son series de la forma: <span class="math display">\[ \sum_{n=1}^{\infty} \frac{1}{n^p} \]</span> donde <span class="math inline">\(p\)</span> es un número real. La convergencia de las series P depende del valor de <span class="math inline">\(p\)</span>: - Si <span class="math inline">\(p &gt; 1\)</span>, la serie converge. - Si <span class="math inline">\(p \leq 1\)</span>, la serie diverge.</p>
 </section>
 <section id="ejercicio-4" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h2>
-<p>Calcular la integral impropia: <span class="math display">\[ \int_{0}^{4} \frac{1}{(x-1)^2} \, dx \]</span></p>
+<p>Determine si la serie es convergente o divergente. <span class="math display">\[ \sum_{n=1}^{\infty} \frac{4}{\sqrt[3]{n}} \]</span></p>
 </section>
-<section id="section-9" class="level2">
-<h2 class="anchored" data-anchor-id="section-9"></h2>
-<div style="text-align:center; width:70%; margin-left: auto; margin-right: auto;">
-<p><img src="./7.png" class="img-fluid"></p>
-</div>
-</section>
-<section id="section-10" class="level2">
-<h2 class="anchored" data-anchor-id="section-10"></h2>
-<p>En este caso, la integral impropia tiene una discontinuidad en <span class="math inline">\(x = 1\)</span>, por lo que debemos dividirla en dos integrales impropias: <span class="math display">\[ \int_{0}^{4} \frac{1}{(x-1)^2} \, dx = \int_{0}^{1} \frac{1}{(x-1)^2} \, dx + \int_{1}^{4} \frac{1}{(x-1)^2} \, dx \]</span> Resolviendo la primera integral impropia, se evalua por la izquierda, ya que es el límite superior: <span class="math display">\[ \int_{0}^{1} \frac{1}{(x-1)^2} \, dx = \lim_{a \to 1^-} \int_{0}^{a} \frac{1}{(x-1)^2} \, dx \]</span></p>
-</section>
-<section id="section-11" class="level2">
-<h2 class="anchored" data-anchor-id="section-11"></h2>
-<p>Por sustitución <span class="math inline">\(u = x - 1\)</span>, tenemos que <span class="math inline">\(du = dx\)</span>: <span class="math display">\[ = \lim_{a \to 1^-} \int_{0}^{a} \frac{1}{u^2} \, du \]</span> <span class="math display">\[ = \lim_{a \to 1^-} \left[ -\frac{1}{u} \right]_{0}^{a} \]</span> Revirtiendo la sustitución:</p>
-<p><span class="math display">\[ = \lim_{a \to 1^-} \left[ -\frac{1}{x-1} \right]_{0}^{a} \]</span> Evaluando los límites: <span class="math display">\[ = \lim_{a \to 1^-} \left( -\frac{1}{a-1} + \frac{1}{0-1} \right) \]</span></p>
-</section>
-<section id="section-12" class="level2">
-<h2 class="anchored" data-anchor-id="section-12"></h2>
-<p><span class="math display">\[ = \lim_{a \to 1^-} \left( -\frac{1}{a-1} + 1 \right) \]</span> <span class="math display">\[ = \lim_{a \to 1^-} \left( -\infty + 1 \right) = -\infty \]</span> A pesar de que la integral impropia diverge, debemos resolver la segunda parte, se evalúa por la derecha que es el límite inferior: <span class="math display">\[ \int_{1}^{4} \frac{1}{(x-1)^2} \, dx = \lim_{b \to 1^+} \int_{b}^{4} \frac{1}{(x-1)^2} \, dx \]</span> <span class="math display">\[ = \lim_{b \to 1^+} \left[ -\frac{1}{x-1} \right]_{b}^{4} \]</span> <span class="math display">\[ = \lim_{b \to 1^+} \left( -\frac{1}{4-1} + \frac{1}{b-1} \right) \]</span></p>
-</section>
-<section id="section-13" class="level2">
-<h2 class="anchored" data-anchor-id="section-13"></h2>
-<p><span class="math display">\[ = \lim_{b \to 1^+} \left( -\frac{1}{3} + \frac{1}{b-1} \right) \]</span> <span class="math display">\[ = \lim_{b \to 1^+} \left( -\frac{1}{3} + \infty \right) = \infty \]</span></p>
-<p>Por lo que la integral impropia original diverge: <span class="math display">\[ \int_{0}^{4} \frac{1}{(x-1)^2} \, dx = -\infty + \infty = \text{Diverge} \]</span></p>
+<section id="section-7" class="level2">
+<h2 class="anchored" data-anchor-id="section-7"></h2>
+<p>Para determinar la convergencia de la serie <span class="math inline">\(\sum_{n=1}^{\infty} \frac{4}{\sqrt[3]{n}}\)</span>, podemos reescribirla como: <span class="math display">\[ 4 \sum_{n=1}^{\infty} \frac{1}{n^{1/3}} \]</span> Esta es una serie P con <span class="math inline">\(p = \frac{1}{3}\)</span>. Según el criterio de convergencia de las series P, diverge. Esto tiene sentido porque los términos de la serie no tienden a cero, lo que es un indicativo de divergencia.</p>
 </section>
 <section id="ejercicio-5" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-5">Ejercicio 5</h2>
-<p><span class="math display">\[ \int_{1}^{4} \frac{1}{\sqrt{x - 1}} \, dx \]</span></p>
+<p>Dada la siguiente serie, determine su convergencia o divergencia. <span class="math display">\[ \sum_{n=1}^{\infty} \frac{ln(n)}{n^3} \]</span></p>
 </section>
-<section id="section-14" class="level2">
-<h2 class="anchored" data-anchor-id="section-14"></h2>
-<div style="text-align:center; width:70%; margin-left: auto; margin-right: auto;">
-<p><img src="./8.png" class="img-fluid"></p>
-</div>
-</section>
-<section id="section-15" class="level2">
-<h2 class="anchored" data-anchor-id="section-15"></h2>
-<p>En este caso, la integral impropia tiene una discontinuidad en <span class="math inline">\(x = 1\)</span>, por lo que debemos reemplazarla por un límite: <span class="math display">\[ \int_{1}^{4} \frac{1}{\sqrt{x - 1}} \, dx = \lim_{a \to 1^+} \int_{a}^{4} \frac{1}{\sqrt{x - 1}} \, dx \]</span> <span class="math display">\[ = \lim_{a \to 1^+} \left[ 2\sqrt{x - 1} \right]_{a}^{4} \]</span> <span class="math display">\[ = \lim_{a \to 1^+} \left( 2\sqrt{4 - 1} - 2\sqrt{a - 1} \right) \]</span> <span class="math display">\[ = \lim_{a \to 1^+} \left( 2\sqrt{3} - 2\sqrt{a - 1} \right) \]</span> <span class="math display">\[ = 2\sqrt{3} - 2\sqrt{0} \]</span> <span class="math display">\[ = 2\sqrt{3} \]</span></p>
-</section>
-<section id="criterio-de-comparación" class="level2">
-<h2 class="anchored" data-anchor-id="criterio-de-comparación">Criterio de Comparación</h2>
-<p>El criterio de comparación es una herramienta útil para determinar la convergencia o divergencia de integrales impropias. Se basa en comparar la integral que estamos evaluando con otra integral conocida cuya convergencia o divergencia ya se ha establecido.</p>
-<p>Sean <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> funciones continuas y con <span class="math inline">\(f(x) \geq g(x) &gt; 0\)</span> para todo <span class="math inline">\(x \geq a\)</span>, donde <span class="math inline">\(a\)</span> es un número real. Entonces:</p>
-<ul>
-<li>Si <span class="math inline">\(\int_{a}^{\infty} f(x) \, dx\)</span> converge, entonces <span class="math inline">\(\int_{a}^{\infty} g(x) \, dx\)</span> también converge.</li>
-<li>Si <span class="math inline">\(\int_{a}^{\infty} g(x) \, dx\)</span> diverge, entonces <span class="math inline">\(\int_{a}^{\infty} f(x) \, dx\)</span> también diverge.</li>
-</ul>
-</section>
-<section id="section-16" class="level2">
-<h2 class="anchored" data-anchor-id="section-16"></h2>
-<div style="text-align:center; width:100%; margin-left: auto; margin-right: auto;">
-<p><img src="./9.png" class="img-fluid"></p>
-</div>
+<section id="section-8" class="level2">
+<h2 class="anchored" data-anchor-id="section-8"></h2>
+<p>Para esto, podemos aplicar el criterio de comparación. Observamos que: <span class="math display">\[ \frac{\ln(n)}{n^3} \leq \frac{n}{n^{3}} \]</span> Si en el lado derecho dividimos el numerador y el denominador por <span class="math inline">\(n\)</span>, obtenemos: <span class="math display">\[ \frac{\ln(n)}{n^3} \leq \frac{1}{n^{2}} \]</span> Lo que es una serie P con <span class="math inline">\(p = 2\)</span>.</p>
+<p>Según el criterio de convergencia de las series P, la serie <span class="math inline">\(\sum_{n=1}^{\infty} \frac{1}{n^2}\)</span> converge porque <span class="math inline">\(p = 2 &gt; 1\)</span>.</p>
 </section>
 <section id="ejercicio-6" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-6">Ejercicio 6</h2>
-<p>Demuestre que la integral siguiente converge: <span class="math display">\[ \int_{0}^{\infty} e^{-x^2} \, dx \]</span></p>
+<p>Determine si la serie es convergente o divergente. <span class="math display">\[ \sum_{n=1}^{\infty} \frac{n^n}{n!} \]</span></p>
 </section>
-<section id="section-17" class="level2">
-<h2 class="anchored" data-anchor-id="section-17"></h2>
-<p>Primero, podemos separar la integral impropia en dos partes: <span class="math display">\[ \int_{0}^{\infty} e^{-x^2} \, dx = \int_{0}^{1} e^{-x^2} \, dx + \int_{1}^{\infty} e^{-x^2} \, dx \]</span> La primera parte, <span class="math inline">\(\int_{0}^{1} e^{-x^2} \, dx\)</span>, es una integral definida y converge porque la función <span class="math inline">\(e^{-x^2}\)</span> es continua y acotada en el intervalo <span class="math inline">\([0, 1]\)</span>. La segunda parte, <span class="math inline">\(\int_{1}^{\infty} e^{-x^2} \, dx\)</span>, es una integral impropia. Para evaluar su convergencia, podemos usar el criterio de comparación. Observamos que para <span class="math inline">\(x \geq 1\)</span>, <span class="math inline">\(e^{-x^2} &lt; e^{-x}\)</span>, por lo que podemos comparar con la integral conocida: <span class="math display">\[ \int_{1}^{\infty} e^{-x} \, dx \]</span></p>
+<section id="section-9" class="level2">
+<h2 class="anchored" data-anchor-id="section-9"></h2>
+<p>Para determinar la convergencia de la serie <span class="math inline">\(\sum_{n=1}^{\infty} \frac{n^n}{n!}\)</span>. Podemos probar valores de <span class="math inline">\(n\)</span> en el numerador y el denominador para ver si la serie converge o diverge. En primer lugar, observamos que el numerador crece mucho más rápido que el denominador:</p>
+<ul>
+<li>Para <span class="math inline">\(n = 1\)</span>: <span class="math inline">\(1 = 1! \le 1^1= 1\)</span></li>
+<li>Para <span class="math inline">\(n = 2\)</span>: <span class="math inline">\(2 = 2! \le 2^2 = 4\)</span></li>
+<li>Para <span class="math inline">\(n = 3\)</span>: <span class="math inline">\(6 = 3! \le 3^3 = 27\)</span></li>
+</ul>
+<p>Por lo tanto: <span class="math display">\[ n! \leq n^n \]</span> Si dividimos ambos lados por <span class="math inline">\(n!\)</span>, obtenemos: <span class="math display">\[ 1 \le \frac{n^n}{n!}\]</span></p>
 </section>
-<section id="section-18" class="level2">
-<h2 class="anchored" data-anchor-id="section-18"></h2>
-<p>Esta integral converge, ya que: <span class="math display">\[ \int_{1}^{\infty} e^{-x} \, dx = \lim_{b \to \infty} \left[ -e^{-x} \right]_{1}^{b} = \lim_{b \to \infty} (-e^{-b} + e^{-1}) = 0 + e^{-1} = e^{-1} \]</span></p>
-<p>Por lo tanto, por el criterio de comparación, la integral <span class="math inline">\(\int_{1}^{\infty} e^{-x^2} \, dx\)</span> también converge.</p>
-</section>
-<section id="ejercicio-7" class="level2">
-<h2 class="anchored" data-anchor-id="ejercicio-7">Ejercicio 7</h2>
-<p>Demuestre que la integral siguiente converge o diverge: <span class="math display">\[ \int_{\pi}^{\infty} \frac{1 + \sin(x)}{x^2} \, dx \]</span></p>
-</section>
-<section id="section-19" class="level2">
-<h2 class="anchored" data-anchor-id="section-19"></h2>
-<p>Tenemos que encontrar una función <span class="math inline">\(g(x)\)</span> que sea más simple y que nos permita aplicar el criterio de comparación. Observamos que: <span class="math display">\[ \frac{1 + \sin(x)}{x^2} \leq \frac{2}{x^2} \]</span> Verificamos que <span class="math inline">\(\frac{1 + \sin(x)}{x^2}\)</span> es positiva y acotada por <span class="math inline">\(\frac{2}{x^2}\)</span> para <span class="math inline">\(x \geq \pi\)</span>. Ahora, evaluamos la integral: <span class="math display">\[ \int_{\pi}^{\infty} \frac{2}{x^2} \, dx = 2 \lim_{b \to \infty} \left[ -\frac{1}{x} \right]_{\pi}^{b} = 2 \lim_{b \to \infty} \left( -\frac{1}{b} + \frac{1}{\pi} \right) = 0 + \frac{2}{\pi} = \frac{2}{\pi} \]</span> Por lo tanto, la integral <span class="math inline">\(\int_{\pi}^{\infty} \frac{1 + \sin(x)}{x^2} \, dx\)</span> converge por el criterio de comparación.</p>
+<section id="section-10" class="level2">
+<h2 class="anchored" data-anchor-id="section-10"></h2>
+<p>Para todo <span class="math inline">\(n \geq 1\)</span>, esto implica que la serie diverge, ya que los términos de la serie no tienden a cero. Por lo tanto, la serie <span class="math inline">\(\sum_{n=1}^{\infty} \frac{n^n}{n!}\)</span> es divergente.</p>
 </section>
 <section id="gracias-por-su-atención" class="level1">
 <h1>Gracias por su atención</h1>

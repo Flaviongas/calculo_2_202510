@@ -1,0 +1,174 @@
+---
+title: Series de Potencia
+author: "Flavio Jara L."
+forma:
+ html
+---
+
+## Series
+Una serie es la suma de los términos de una sucesión. Si la sucesión es infinita, la serie es infinita.
+Una serie infinita es una suma de la forma:
+$$ s_n = \sum_{i=1}^{n} a_i = a_1 + a_2 + a_3 + \ldots + a_n $$
+
+## Convergencia y Divergencia
+Una serie infinita puede converger o divergir. Una serie converge si la suma de sus términos se aproxima a un número finito a medida que se suman más términos. Si no, la serie diverge.
+
+Si la sucesión $s_n$ converge, es decir que existe un número real $S$ tal que:
+$$ \lim_{n \to \infty} s_n = S $$
+entonces decimos que la serie converge a $S$ y escribimos:
+$$ \sum_{i=1}^{\infty} a_i = S $$
+
+## Series de Potencia
+Una serie de potencia es una serie de la forma:
+$$ \sum_{n=0}^{\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \ldots $$
+
+## Criterios de Convergencia
+Existen varios criterios para determinar la convergencia de series de potencia, entre ellos:
+
+- **Criterio de la razón**: Si existe el límite
+$$ L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| $$
+y $L < 1$, entonces la serie converge absolutamente. Si $L > 1$, la serie diverge. Si $L = 1$, el criterio es inconcluso.
+- **Criterio de la raíz**: Si existe el límite
+$$ L = \lim_{n \to \infty} \sqrt[n]{|a_n|} $$
+y $L < 1$, entonces la serie converge absolutamente. Si $L > 1$, la serie diverge. Si $L = 1$, el criterio es inconcluso.
+
+##
+
+- **Criterio de comparación**: Si $0 \leq a_n \leq b_n$ para todo $n$ y
+$$\sum_{n=1}^{\infty} b_n$$ converge, entonces $$\sum_{n=1}^{\infty} a_n$$ también converge. Si $\sum_{n=1}^{\infty} a_n$ diverge, entonces $\sum_{n=1}^{\infty} b_n$ también diverge.
+
+##
+- **Criterio del n-ésimo término**: Si $\lim_{n \to \infty} a_n \neq 0$ o no existe, entonces la serie $\sum_{n=1}^{\infty} a_n$ diverge. Si $\lim_{n \to \infty} a_n = 0$, el criterio es inconcluso.
+
+
+## Series Geométricas
+Una serie geométrica es una serie de potencia donde cada término es un múltiplo constante del anterior. La forma general de una serie geométrica es:
+$$ \sum_{n=1}^{\infty} a r^{n-1} = a + ar + ar^2 + ar^3 + \ldots $$
+donde $a$ es el primer término y $r$ es la razón común. La serie converge si $|r| < 1$ y su suma es:
+$$ S = \frac{a}{1 - r} $$
+
+## Ejercicio 1
+Sea:
+$$a_n = \frac{2n}{3n + 1}$$
+
+- Determine si ${a_n}$ es una sucesión convergente o divergente, en caso de ser convergente, determine su límite.
+- Determine si la serie $\sum_{n=1}^{\infty} a_n$ es convergente o divergente, en caso de ser convergente, determine su suma.
+
+## Convergencia de la Sucesión
+Para determinar la convergencia de la sucesión $a_n = \frac{2n}{3n + 1}$, calculamos el límite cuando $n$ tiende a infinito:
+$$ \lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{2n}{3n + 1}$$
+Dividiendo el numerador y el denominador por $n$:
+$$ \lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{2}{3 + \frac{1}{n}} = \frac{2}{3 + 0} = \frac{2}{3} $$
+Por lo tanto, la sucesión $a_n$ es convergente y su límite es $\frac{2}{3}$.
+
+## Convergencia de la Serie
+Para determinar la convergencia de la serie $\sum_{n=1}^{\infty} a_n$, aplicamos el criterio del n-ésimo término:
+$$ \lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{2n}{3n + 1} = \frac{2}{3} $$
+Dado que el límite no es cero, la serie diverge según el criterio del n-ésimo término.
+Aunque podriamos haberlo intuido al observar que los términos de la serie no tienden a cero, lo que es un indicativo de divergencia.
+
+## Ejercicio 2
+Dada la siguiente serie:
+$$ \sum_{n=1}^{\infty} \frac{3}{5^{n-1}} $$
+
+- Determine si la serie es convergente o divergente.
+- En caso de ser convergente, determine su suma.
+
+##
+Para determinar la convergencia de la serie $\sum_{n=1}^{\infty} \frac{3}{5^{n-1}}$, primero identificamos que es una serie geométrica.
+Factorizando la serie:
+$$ \sum_{n=1}^{\infty} \frac{3}{5^{n-1}} = 3 \sum_{n=1}^{\infty} \frac{1}{5^{n-1}}$$
+$$ 3 \sum_{n=1}^{\infty} \frac{1}{5^{n-1}} = 3 \sum_{n=1}^{\infty} \left(\frac{1}{5}\right)^{n-1}$$
+En base a esto, podemos identificar que la serie es geométrica con $a = 3$ y $r = \frac{1}{5}$.
+
+##
+La serie converge porque $|r| = \frac{1}{5} < 1$. La suma de una serie geométrica se calcula con la fórmula:
+$$ S = \frac{a}{1 - r} $$
+Sustituyendo los valores:
+$$ S = \frac{3}{1 - \frac{1}{5}} = \frac{3}{\frac{4}{5}} = 3 \cdot \frac{5}{4} = \frac{15}{4} $$
+
+## Ejercicio 3
+Determine si la serie es convergente o divergente. Si es convergente, determine su suma.
+$$ \sum_{n=1}^{\infty} \left[ (0.8)^{n-1} - (0.3)^{n} \right] $$
+
+##
+Para determinar la convergencia de la serie $\sum_{n=1}^{\infty} \left[ (0.8)^{n-1} - (0.3)^{n} \right]$, podemos separar la serie en dos series:
+$$ \sum_{n=1}^{\infty} (0.8)^{n-1} - \sum_{n=1}^{\infty} (0.3)^{n} $$
+
+##### Primera serie
+Podemos reescribir la primera serie como:
+$$ \sum_{n=1}^{\infty} (0.8)^{n} = \sum_{n=1}^{\infty} 1\cdot(0.8)^{n} $$
+Esta es una serie geométrica con $a = 1$ y $r = 0.8$. La serie converge porque $|r| < 1$.
+
+##
+La suma de la primera  serie geométrica es:
+$$ S_1 = \frac{1}{1 - 0.8} = \frac{1}{0.2} = 5 $$
+
+##### Segunda serie
+La segunda serie es:
+$$ \sum_{n=1}^{\infty} (0.3)^{n} $$
+Para que tenga la forma de una serie geométrica, podemos reescribirla como:
+$$ \sum_{n=1}^{\infty} (0.3)^{n} = \sum_{n=1}^{\infty} (0.3)(0.3)^{n-1} $$
+
+##
+Esta es una serie geométrica con $a = 0.3$ y $r = 0.3$. La serie converge porque $|r| < 1$.
+La suma de la segunda serie geométrica es:
+$$ S_2 = \frac{0.3}{1 - 0.3} = \frac{0.3}{0.7} = \frac{3}{7} $$
+
+#### Suma de la serie original
+La suma de la serie original es:
+$$ S = S_1 - S_2 = 5 - \frac{3}{7} = \frac{35}{7} - \frac{3}{7} = \frac{32}{7} $$
+Por lo tanto, la serie $\sum_{n=1}^{\infty} \left[ (0.8)^{n-1} - (0.3)^{n} \right]$ es convergente y su suma es $\frac{32}{7}$.
+
+## Series P
+Las series P son series de la forma:
+$$ \sum_{n=1}^{\infty} \frac{1}{n^p} $$
+donde $p$ es un número real. La convergencia de las series P depende del valor de $p$:
+- Si $p > 1$, la serie converge.
+- Si $p \leq 1$, la serie diverge.
+
+## Ejercicio 4
+Determine si la serie es convergente o divergente.
+$$ \sum_{n=1}^{\infty} \frac{4}{\sqrt[3]{n}} $$
+
+##
+Para determinar la convergencia de la serie $\sum_{n=1}^{\infty} \frac{4}{\sqrt[3]{n}}$, podemos reescribirla como:
+$$ 4 \sum_{n=1}^{\infty} \frac{1}{n^{1/3}} $$
+Esta es una serie P con $p = \frac{1}{3}$. Según el criterio de convergencia de las series P, diverge.
+Esto tiene sentido porque los términos de la serie no tienden a cero, lo que es un indicativo de divergencia.
+
+## Ejercicio 5
+Dada la siguiente serie, determine su convergencia o divergencia.
+$$ \sum_{n=1}^{\infty} \frac{ln(n)}{n^3} $$
+
+##
+Para esto, podemos aplicar el criterio de comparación. Observamos que:
+$$ \frac{\ln(n)}{n^3} \leq \frac{n}{n^{3}} $$
+Si en el lado derecho dividimos el numerador y el denominador por $n$, obtenemos:
+$$ \frac{\ln(n)}{n^3} \leq \frac{1}{n^{2}} $$
+Lo que es una serie P con $p = 2$.
+
+Según el criterio de convergencia de las series P, la serie $\sum_{n=1}^{\infty} \frac{1}{n^2}$ converge porque $p = 2 > 1$.
+
+## Ejercicio 6
+Determine si la serie es convergente o divergente.
+$$ \sum_{n=1}^{\infty} \frac{n^n}{n!} $$
+
+##
+Para determinar la convergencia de la serie $\sum_{n=1}^{\infty} \frac{n^n}{n!}$. Podemos probar valores de $n$ en el numerador y el denominador para ver si la serie converge o diverge.
+En primer lugar, observamos que el numerador crece mucho más rápido que el denominador:
+
+- Para $n = 1$: $1 = 1! \le 1^1= 1$
+- Para $n = 2$: $2 = 2! \le 2^2 = 4$
+- Para $n = 3$: $6 = 3! \le 3^3 = 27$
+
+Por lo tanto:
+$$ n! \leq n^n $$
+Si dividimos ambos lados por $n!$, obtenemos:
+$$ 1 \le \frac{n^n}{n!}$$
+
+##
+Para todo $n \geq 1$, esto implica que la serie diverge, ya que los términos de la serie no tienden a cero. Por lo tanto, la serie $\sum_{n=1}^{\infty} \frac{n^n}{n!}$ es divergente.
+
+
+# Gracias por su atención
