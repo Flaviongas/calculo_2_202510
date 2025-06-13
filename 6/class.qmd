@@ -117,7 +117,7 @@ $$ S_1 = \frac{1}{1 - 0.8} = \frac{1}{0.2} = 5 $$
 La segunda serie es:
 $$ \sum_{n=1}^{\infty} (0.3)^{n} $$
 Para que tenga la forma de una serie geométrica, podemos reescribirla como:
-$$ \sum_{n=1}^{\infty} (0.3)^{n} = \sum_{n=0}^{\infty} (0.3)(0.3)^{n-1} $$
+$$ \sum_{n=1}^{\infty} (0.3)^{n} = \sum_{n=1}^{\infty} (0.3)(0.3)^{n-1} $$
 
 ##
 Esta es una serie geométrica con $a = 0.3$ y $r = 0.3$. La serie converge porque $|r| < 1$.
