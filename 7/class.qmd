@@ -1,0 +1,43 @@
+---
+title: Repaso Prueba 3
+author: "Flavio Jara L."
+format:
+  revealjs:
+      transition: zoom
+      html-math-method: katex
+include-in-header:
+  - text: |
+      <style>
+      p,ul {
+        font-size: 0.70em;
+      }
+      </style>
+---
+
+## Ejercicio 1
+Analize la convergencia de la siguiente integral impropia, si es convergente, calcule su valor:
+$$ \int_1^\infty \frac{1}{x^3 + x^2} dx $$
+
+##
+Podemos analizar el comportamiento del denominador utilizando el criterio de comparación.
+
+### Criterio de comparación
+
+##### Convergencia
+Sea $g(x) \geq 0$ para todo $x \geq a$ y supongase que $\int_a^b \,g(x) \,dx$ es convergente. Entonces si $0 \leq f(x) \leq g(x)$ para todo $x \geq a$, entonces $\int_a^b \,f(x) \,dx$ es convergente.
+
+##### Divergencia
+Sea $g(x) \geq 0$ para todo $x \geq a$ y supongase que $\int_a^b \,g(x) \,dx$ es divergente. Entonces si $f(x) \geq g(x)$ para todo $x \geq a$, entonces $\int_a^b \,f(x) \,dx$ es divergente.
+
+##
+El denominador $x^3 + x^2$ es mayor que $x^3$ para todo $x \geq 0$, por lo tanto:
+$$ \frac{1}{x^3 + x^2} \leq \frac{1}{x^3} $$
+Dado que $\frac{1}{x^3}$ es una integral sencilla, podemos calcularla directamente para ver si converge:
+$$ \int_1^\infty \frac{1}{x^3} dx = \lim_{b \to \infty} \left[ -\frac{1}{2x^2} \right]_1^b = \lim_{b \to \infty} \left( -\frac{1}{2b^2} + \frac{1}{2} \right) = 0 + \frac{1}{2} = \frac{1}{2} $$
+
+Por el criterio de convergencia de comparación, la integral original también converge. Por lo que podemos calcularla.
+
+##
+$$ \int_1^\infty \frac{1}{x^3 + x^2} dx = \lim_{b \to \infty} \int_1^b \frac{1}{x^3 + x^2} dx $$
+Esto se puede separar por fracciones parciales, desarrollo que no se mostrará aquí.
+
