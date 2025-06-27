@@ -40,4 +40,69 @@ Por el criterio de convergencia de comparación, la integral original también c
 ##
 $$ \int_1^\infty \frac{1}{x^3 + x^2} dx = \lim_{b \to \infty} \int_1^b \frac{1}{x^3 + x^2} dx $$
 Esto se puede separar por fracciones parciales, desarrollo que no se mostrará aquí.
+$$ \lim_{b \to \infty} \int_1^b \frac{1}{x^3 + x^2} dx = \int_1^b \frac{1}{x+1} - \int_1^b\frac{1}{x} + \int_1^b\frac{1}{x^2} dx $$
 
+Resolviendo la primera integral sustituyendo $u = x + 1$, tenemos:
+$$\lim_{b \to \infty}  \int_1^b \frac{1}{x+1} dx = \lim_{b \to \infty}  \left[ \ln|x+1| \right]_1^b $$
+
+##
+Resolviendo la segunda integral:
+$$\lim_{b \to \infty}  \int_1^b \frac{1}{x} dx = \lim_{b \to \infty}  \left[ \ln|x| \right]_1^b $$
+
+Y resolviendo la tercera integral:
+$$\lim_{b \to \infty}  \int_1^b \frac{1}{x^2} dx = \lim_{b \to \infty}  \left[ -\frac{1}{x} \right]_1^b $$
+
+##
+Dado que estas 3 integrales tienen los mismos límites de integración, podemos evaluarlas todas juntas:
+$$\lim_{b \to \infty}  \left[ \ln|x+1| - \ln|x| - \frac{1}{x} \right]_1^b $$
+Por propiedad de logaritmos, podemos simplificar:
+$$\lim_{b \to \infty}  \left[ \ln\left(\frac{x+1}{x}\right) - \frac{1}{x} \right]_1^b $$
+$$ \lim_{b \to \infty}  \left[ \ln\left(1 + \frac{1}{x}\right) - \frac{1}{x} \right]_1^b $$
+
+##
+Evaluando todos la expresión en los límites de integración:
+$$ \lim_{b \to \infty}  \left[ \ln\left(1 + \frac{1}{b}\right) - \frac{1}{b} \right] - \left[ \ln\left(1 + 1\right) - 1 \right] $$
+Dado que $\ln(1 + \frac{1}{b})$ tiende a 0 cuando $b$ tiende a infinito, y $\frac{1}{b}$ también tiende a 0, la expresión se simplifica a:
+$$ 0 - \left[ \ln(2) - 1 \right] = 1 - \ln(2) $$
+
+## Ejercicio 2
+Determine si la siguiente integral converge:
+$$ \int_0^2 \frac{x+1}{\sqrt{4-x^2}} dx $$
+
+##
+Podemos notar que el denominador $\sqrt{4 - x^2}$ se vuelve 0 cuando $x = 2$, lo que indica que la integral no está definida en ese punto. Por lo tanto, debemos considerar la integral como una integral impropia.
+
+Podemos separar la integral en dos partes:
+$$ \int_0^2 \frac{x+1}{\sqrt{4-x^2}} dx = \lim_{b \to 2} \int_0^b \frac{x}{\sqrt{4-x^2}} dx + \lim_{b \to 2} \int_0^b \frac{1}{\sqrt{4-x^2}} dx $$
+
+Integremos la primera parte:
+$$ \lim_{b \to 2} \int_0^b \frac{x}{\sqrt{4-x^2}} dx $$
+
+##
+Podemos sustituir $u = 4 - x^2$, lo que implica que $du = -2x \, dx \,$ y $\,dx = -\frac{du}{2x}$. Sustituyendo:
+$$ \lim_{b \to 2} \int_0^b \frac{x}{\sqrt{4-x^2}} dx = \lim_{b \to 2} \int_0^b \frac{-1}{2\sqrt{u}} du $$
+$$ \lim_{b \to 2} -\frac{1}{2} \int_0^b u^{-1/2} du = \lim_{b \to 2} -\frac{1}{2} \left[ 2u^{1/2} \right]_0^b $$
+Regresando a la variable original:
+$$ \lim_{b \to 2} -\frac{1}{2} \left[ 2\sqrt{4 - x^2} \right] \bigg|_0^b $$
+
+##
+Evaluamos los límites de integración:
+$$ \lim_{b \to 2} -\frac{1}{2} \left[ 2\sqrt{4 - b^2} - 2\sqrt{4 - 0^2} \right] $$
+Dado que $\sqrt{4 - b^2}$ tiende a 0 cuando $b$ tiende a 2, la expresión se simplifica a:
+$$ -\frac{1}{2} \left[ 0 - 4 \right] = 2 $$
+
+##
+Ahora integremos la segunda parte:
+$$ \lim_{b \to 2} \int_0^b \frac{1}{\sqrt{4-x^2}} dx $$
+Esta es una integral conocida que se puede resolver utilizando la sustitución trigonométrica o (como comunmente se sale en los exámenes) el resultado conocido:
+$$ \lim_{b \to 2} \left[ \arcsin\left(\frac{x}{2}\right) \right]_0^b $$
+Evaluando los límites de integración:
+$$ \lim_{b \to 2} \left[ \arcsin\left(\frac{b}{2}\right) - \arcsin(0) \right] $$
+
+##
+Dado que $\arcsin(0) = 0\,$ y $\,\arcsin(1) = \frac{\pi}{2}$, la expresión se simplifica a:
+$$ \lim_{b \to 2} \left[ \arcsin\left(\frac{b}{2}\right) \right] = \frac{\pi}{2} $$
+
+#### Resultado final
+Por lo tanto, la integral original converge y su valor es:
+$$ \int_0^2 \frac{x+1}{\sqrt{4-x^2}} dx = 2 + \frac{\pi}{2} $$
