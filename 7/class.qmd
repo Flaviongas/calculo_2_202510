@@ -2,16 +2,7 @@
 title: Repaso Prueba 3
 author: "Flavio Jara L."
 format:
-  revealjs:
-      transition: zoom
-      html-math-method: katex
-include-in-header:
-  - text: |
-      <style>
-      p,ul {
-        font-size: 0.70em;
-      }
-      </style>
+  html
 ---
 
 ## Ejercicio 1
@@ -106,3 +97,211 @@ $$ \lim_{b \to 2} \left[ \arcsin\left(\frac{b}{2}\right) \right] = \frac{\pi}{2}
 #### Resultado final
 Por lo tanto, la integral original converge y su valor es:
 $$ \int_0^2 \frac{x+1}{\sqrt{4-x^2}} dx = 2 + \frac{\pi}{2} $$
+
+## Ejercicio 3
+Dada esta serie, determine si converge o diverge, y si converge, calcule su valor:
+$$ \sum_{n=1}^\infty \left(\frac{2n^2}{3n^2 - n + 1} \right)^n $$
+
+##
+Este ejercicio es un poco más complicado, pero podemos utilizar el criterio de la raíz para determinar la convergencia de la serie.
+
+### Criterio de la raíz
+Sea $a_n$ una sucesión de números reales positivos. Si existe el límite:
+$$ L = \lim_{n \to \infty} \sqrt[n]{a_n} $$
+Entonces:
+
+- Si $L < 1$, la serie $\sum_{n=1}^\infty a_n$ converge.
+- Si $L > 1$, la serie $\sum_{n=1}^\infty a_n$ diverge.
+- Si $L = 1$, el criterio es inconcluso.
+
+##
+Calculamos el límite aplicando la raiz n-ésima a la expresión de la serie:
+$$ L = \lim_{n \to \infty} \sqrt[n]{\left(\frac{2n^2}{3n^2 - n + 1} \right)^n} $$
+Esto se simplifica a:
+$$ L = \lim_{n \to \infty} \left(\frac{2n^2}{3n^2 - n + 1} \right) $$
+Hay múltiples formas de simplificar esta expresión, una bastante sencilla sería aplicar L'Hôpital varias veces:
+$$ L = \frac{d}{dn} \frac{2n^2}{3n^2 - n + 1} = \frac{4n}{6n - 1} $$
+
+##
+Aplicando L'Hôpital nuevamente:
+$$ L = \frac{d}{dn} \frac{4n}{6n - 1} = \frac{4}{6} = \frac{2}{3} $$
+Por lo tanto, el límite es:
+$$ L = \frac{2}{3} $$
+
+## Ejercicio 4
+Determine si la siguiente serie converge o diverge:
+$$ \sum_{n=1}^\infty \frac{n^3}{2^n} $$
+
+##
+Podemos utilizar el criterio de la razón para determinar la convergencia de esta serie.
+### Criterio de la razón
+Sea $a_n$ una sucesión de números reales positivos. Si existe el límite:
+$$ L = \lim_{n \to \infty} \frac{a_{n+1}}{a_n} $$
+Entonces:
+
+- Si $L < 1$, la serie $\sum_{n=1}^\infty a_n$ converge.
+- Si $L > 1$, la serie $\sum_{n=1}^\infty a_n$ diverge.
+- Si $L = 1$, el criterio es inconcluso.
+
+##
+Calculamos el límite aplicando el criterio de la razón a la expresión de la serie:
+$$ L = \lim_{n \to \infty} \frac{a_{n+1}}{a_n} = \lim_{n \to \infty} \frac{\frac{(n+1)^3}{2^{n+1}}}{\frac{n^3}{2^n}} $$
+Esto se simplifica a:
+$$ L = \lim_{n \to \infty} \frac{(n+1)^3}{2n^3} $$
+Desarrollando el numerador:
+$$ L = \lim_{n \to \infty} \frac{n^3 + 3n^2 + 3n + 1}{2n^3} $$
+
+##
+Dividiendo cada término del numerador y el denominador por $n^3$:
+$$ L = \lim_{n \to \infty} \frac{1 + \frac{3}{n} + \frac{3}{n^2} + \frac{1}{n^3}}{2} $$
+Dado que los términos $\frac{3}{n}$, $\frac{3}{n^2}$ y $\frac{1}{n^3}$ tienden a 0 cuando $n$ tiende a infinito, el límite se simplifica a:
+$$ L = \frac{1 + 0 + 0 + 0}{2} = \frac{1}{2} $$
+Por lo tanto, el límite es:
+$$ L = \frac{1}{2} $$
+Dado que $L < 1$, la serie $\sum_{n=1}^\infty \frac{n^3}{2^n}$ converge.
+
+## Series de Taylor
+Una serie de Taylor es una representación de una función como una suma infinita de términos calculados a partir de los valores de la función y sus derivadas en un punto específico.
+La serie de Taylor de una función $f(x)$ alrededor de un punto $a$ se define como:
+$$ f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \ldots $$
+o de manera más compacta:
+$$ f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n $$
+
+## Ejercicio 5
+Calcular la serie de Taylor de la función $f(x) = x^4 - 3x^2 + 1$ alrededor del punto $a = 1$.
+
+##
+Para calcular la serie de Taylor de la función $f(x) = x^4 - 3x^2 + 1$ alrededor del punto $a = 1$, necesitamos calcular las derivadas de la función en el punto $a$ y luego aplicar la fórmula de la serie de Taylor.
+
+#### Primer término
+Calculamos $f(1)$:
+$$ f(1) = 1^4 - 3(1^2) + 1 = 1 - 3 + 1 = -1 $$
+
+#### Segundo término
+Calculamos $f'(x)$:
+$$ f'(x) = 4x^3 - 6x $$
+Calculamos $f'(1)$:
+$$ f'(1) = 4(1^3) - 6(1) = 4 - 6 = -2 $$
+
+
+##
+Y multiplicamos por $(x - 1)$:
+$$ f'(1)(x - 1) = -2(x - 1) $$
+
+#### Tercer término
+Calculamos $f''(x)$:
+$$ f''(x) = 12x^2 - 6 $$
+Calculamos $f''(1)$:
+$$ f''(1) = 12(1^2) - 6 = 12 - 6 = 6 $$
+Multiplicamos por $\frac{(x - 1)^2}{2!}$:
+$$ \frac{f''(1)}{2!}(x - 1)^2 = \frac{6}{2}(x - 1)^2 = 3(x - 1)^2 $$
+
+##
+#### Cuarto término
+Calculamos $f'''(x)$:
+$$ f'''(x) = 24x $$
+Calculamos $f'''(1)$:
+$$ f'''(1) = 24(1) = 24 $$
+Multiplicamos por $\frac{(x - 1)^3}{3!}$:
+$$ \frac{f'''(1)}{3!}(x - 1)^3 = \frac{24}{6}(x - 1)^3 = 4(x - 1)^3 $$
+
+##
+#### Quinto término
+Calculamos $f^{(4)}(x)$:
+$$ f^{(4)}(x) = 24 $$
+Calculamos $f^{(4)}(1)$:
+$$ f^{(4)}(1) = 24 $$
+Multiplicamos por $\frac{(x - 1)^4}{4!}$:
+$$ \frac{f^{(4)}(1)}{4!}(x - 1)^4 = \frac{24}{24}(x - 1)^4 = (x - 1)^4 $$
+
+
+##
+Para los términos superiores, podemos notar que las derivadas de orden superior serán 0, ya que la función es un polinomio de grado 4. Por lo tanto, no necesitamos calcular más términos.
+$$ f^{(n)}(x) = 0 \quad \text{para } n > 4 $$
+
+#### Resultado final
+La serie de Taylor de la función $f(x) = x^4 - 3x^2 + 1$ alrededor del punto $a = 1$ es:
+$$ f(x) = -1 - 2(x - 1) + 3(x - 1)^2 + 4(x - 1)^3 + (x - 1)^4 $$
+
+## Ejercicio 6
+Calcula una fórmula que defina la suma de $n$ terminos de la serie de Maclaurin de la función $f(x) = \sin(x)$.
+
+##
+Recordemos que la serie de Maclaurin es una serie de Taylor centrada en $a = 0$. La serie de Maclaurin de una función $f(x)$ se define como:
+$$ f(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \ldots $$
+o:
+$$ f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!}x^n $$
+
+#### Primer término
+Calculamos $f(0)$:
+$$ f(0) = \sin(0) = 0 $$
+
+##
+#### Segundo término
+Calculamos $f'(x)$:
+$$ f'(x) = \cos(x) $$
+Calculamos $f'(0)$:
+$$ f'(0) = \cos(0) = 1 $$
+Multiplicamos por $x$:
+$$ f'(0)x = 1 \cdot x = x $$
+
+##
+#### Tercer término
+Calculamos $f''(x)$:
+$$ f''(x) = -\sin(x) $$
+Calculamos $f''(0)$:
+$$ f''(0) = -\sin(0) = 0 $$
+Multiplicamos por $\frac{x^2}{2!}$:
+$$ \frac{f''(0)}{2!}x^2 = 0 \cdot \frac{x^2}{2} = 0 $$
+
+##
+#### Cuarto término
+Calculamos $f'''(x)$:
+$$ f'''(x) = -\cos(x) $$
+Calculamos $f'''(0)$:
+$$ f'''(0) = -\cos(0) = -1 $$
+Multiplicamos por $\frac{x^3}{3!}$:
+$$ \frac{f'''(0)}{3!}x^3 = -1 \cdot \frac{x^3}{6} = -\frac{x^3}{6} $$
+
+##
+#### Quinto término
+Calculamos $f^{(4)}(x)$:
+$$ f^{(4)}(x) = \sin(x) $$
+Calculamos $f^{(4)}(0)$:
+$$ f^{(4)}(0) = \sin(0) = 0 $$
+Multiplicamos por $\frac{x^4}{4!}$:
+$$ \frac{f^{(4)}(0)}{4!}x^4 = 0 \cdot \frac{x^4}{24} = 0 $$
+
+##
+A partir de aquí, podemos notar que las derivadas de orden superior seguirán un patrón cíclico, ya que la función seno y coseno son periódicas. Por lo tanto, los términos de orden par serán 0. Por lo tanto, los términos calculados son:
+$$ f(x) = 0 + x + 0 - \frac{x^3}{6} + 0 + \ldots $$
+
+Calculemos un termino más para ver el patrón:
+
+#### Sexto término
+Calculamos $f^{(5)}(x)$:
+$$ f^{(5)}(x) = \cos(x) $$
+Calculamos $f^{(5)}(0)$:
+$$ f^{(5)}(0) = \cos(0) = 1 $$
+
+##
+Multiplicamos por $\frac{x^5}{5!}$:
+$$ \frac{f^{(5)}(0)}{5!}x^5 = 1 \cdot \frac{x^5}{120} = \frac{x^5}{120} $$
+
+Ahora, agregando el término calculado:
+$$ f(x) = 0 + x + 0 - \frac{x^3}{6} + 0 + \frac{x^5}{120} + \ldots $$
+
+Expresemos esto con factoriales:
+$$ f(x) = 0 + x + 0 - \frac{x^3}{3!} + 0 + \frac{x^5}{5!} + \ldots $$
+
+##
+Podemos notar que los términos pares tienen un signo alternante, y que, como habiamos mencionado, los términos de orden par (impares) son 0. Si calcularamos 2 terminos más, veríamos que el patrón se repite:
+$$ f(x) = x  - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots $$
+
+Si queremos armar una fórmula que defina la suma de $n$ términos de la serie de Maclaurin de la función $\sin(x)$, podemos escribir el cambio de signo como $(-1)^k$. Además, el denominador y el exponente siempre son impares, por lo que podemos expresar el exponente y el denominador como $2k + 1$, donde $k$ es el índice del término.
+
+##
+Por lo tanto, la suma de los primeros $n$ términos de la serie de Maclaurin de $\sin(x)$ se puede expresar como:
+$$ S_n(x) = \sum_{k=0}^{n} (-1)^k \frac{x^{2k + 1}}{(2k + 1)!} $$
+
+# Gracias por su atención
